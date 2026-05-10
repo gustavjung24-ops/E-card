@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PowerLink Industrial - E-Card</title>
+  <link rel="stylesheet" href="../assets/css/shared.css" />
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --deep: #061525;
+      --deep-2: #0b2540;
+      --navy: #0d2f55;
+      --blue: #1e88e5;
+      --cyan: #35c8ff;
+      --steel: #d7e2ec;
+      --silver: #f4f8fb;
+      --muted: rgba(226, 238, 248, .72);
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(53,200,255,.20), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(30,136,229,.24), transparent 28%),
+        linear-gradient(135deg, #d7dce2 0%, #aeb8c3 100%);
+      color: var(--silver);
+    }
+
+    .container {
+      width: 100%;
+      max-width: none;
+      height: 100svh;
+      margin: 0;
+      padding: 10px;
+      display: grid;
+      place-items: center;
+    }
+
+    .ecard {
+      width: min(100%, 390px);
+      height: min(96svh, 760px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(53,200,255,.13), transparent 26%),
+        radial-gradient(circle at 92% 18%, rgba(30,136,229,.18), transparent 32%),
+        linear-gradient(180deg, #0d2f55 0%, #071b31 52%, #061525 100%);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow:
+        0 34px 80px rgba(6,21,37,.42),
+        inset 0 1px 0 rgba(255,255,255,.12);
+    }
+
+    .ecard::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 24px 24px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 72%);
+      pointer-events: none;
+    }
+
+    .ecard::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,.055) 42%, transparent 58%);
+      opacity: .55;
+      pointer-events: none;
+    }
+
+    .top {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+      padding: 10px 12px 0;
+    }
+
+    .notch {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      z-index: 5;
+      width: 88px;
+      height: 24px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: #020812;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.12),
+        0 8px 18px rgba(0,0,0,.24);
+    }
+
+    .hero {
+      height: 225px;
+      overflow: hidden;
+      border-radius: 28px;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.20)),
+        url("./hero-industrial.jpeg");
+      background-size: cover;
+      background-position: center;
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.34),
+        inset 0 1px 0 rgba(255,255,255,.20);
+    }
+
+    .wave {
+      height: 52px;
+      margin-top: -24px;
+      background:
+        linear-gradient(180deg, rgba(13,47,85,.96), rgba(7,27,49,1));
+      border-top-left-radius: 85% 52px;
+      border-top-right-radius: 85% 52px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 -12px 28px rgba(6,21,37,.22);
+    }
+
+    .avatar-industrial {
+      width: 90px;
+      height: 90px;
+      margin: -58px auto 8px;
+      position: relative;
+      z-index: 4;
+      border-radius: 999px;
+      padding: 4px;
+      background: linear-gradient(135deg, #e8f5ff, #35c8ff 52%, #1e88e5);
+      box-shadow:
+        0 16px 34px rgba(0,0,0,.32),
+        inset 0 1px 0 rgba(255,255,255,.75);
+    }
+
+    .avatar-industrial img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 999px;
+      object-fit: cover;
+      object-position: center;
+      background: #f4f8fb;
+    }
+
+    .brand {
+      position: relative;
+      z-index: 2;
+      padding: 0 18px;
+      text-align: center;
+      flex: 0 0 auto;
+    }
+
+    .brand h1 {
+      margin: 0;
+      color: var(--silver);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(27px, 7vw, 32px);
+      line-height: 1.03;
+      font-weight: 500;
+      letter-spacing: -.035em;
+      text-shadow: 0 8px 22px rgba(0,0,0,.38);
+    }
+
+    .brand p {
+      margin: 7px 0 13px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .contact-row {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      padding: 0 18px;
+      flex: 0 0 auto;
+    }
+
+    .info-row {
+      position: relative;
+      z-index: 2;
+      padding: 8px 18px 0;
+      flex: 0 0 auto;
+    }
+
+    .btn-oval {
+      min-width: 0;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform .16s ease, filter .16s ease;
+    }
+
+    .btn-oval:active {
+      transform: translateY(1px) scale(.99);
+    }
+
+    .btn-oval.blue {
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.16), transparent 38%),
+        linear-gradient(135deg, #35a8ff, #1565c0);
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow:
+        0 12px 22px rgba(21, 101, 192, .28),
+        inset 0 1px 0 rgba(255,255,255,.20);
+    }
+
+    .btn-oval.light {
+      color: #061525;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.98), rgba(231,241,250,.92));
+      border: 1px solid rgba(53,200,255,.20);
+      box-shadow:
+        0 11px 20px rgba(0,0,0,.16),
+        inset 0 1px 0 rgba(255,255,255,.86);
+    }
+
+    .btn-oval .btn-ico {
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .btn-oval.blue .btn-ico {
+      background: rgba(255,255,255,.92);
+      color: #1565c0;
+    }
+
+    .btn-oval.light .btn-ico {
+      background: linear-gradient(135deg, #35c8ff, #1e88e5);
+      color: #fff;
+    }
+
+    .btn-info {
+      min-height: 36px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 14px;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      color: var(--silver);
+      border: 1px solid rgba(53,200,255,.42);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+      box-shadow:
+        0 10px 18px rgba(0,0,0,.15),
+        inset 0 1px 0 rgba(255,255,255,.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .btn-info .btn-ico {
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #e8f5ff, #35c8ff);
+      color: #061525;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .meta {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      padding: 11px 18px 0;
+      color: rgba(226, 238, 248, .72);
+      font-size: 11px;
+      text-align: center;
+      flex: 0 0 auto;
+    }
+
+    .socials {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+      padding: 10px 0 0;
+      flex: 0 0 auto;
+    }
+
+    .socials span {
+      width: 33px;
+      height: 33px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(53,200,255,.50);
+      color: var(--silver);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        0 9px 18px rgba(0,0,0,.18);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .service-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      padding: 0 14px 18px;
+      margin-top: auto;
+      flex: 0 0 auto;
+      align-items: end;
+    }
+
+    .service {
+      min-width: 0;
+      height: 138px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 18px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(53,200,255,.34);
+      box-shadow:
+        0 13px 24px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.12);
+    }
+
+    .service::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.02) 0%, rgba(0,0,0,.10) 34%, rgba(0,0,0,.62) 100%);
+    }
+
+    .service.bearing {
+      background-image: url("./sp-vong-bi.jpeg");
+    }
+
+    .service.chain {
+      background-image: url("./sp-xich-cong-nghiep.jpeg");
+    }
+
+    .service.belt {
+      background-image: url("./sp-day-curoa.jpeg");
+    }
+
+    .service.tech {
+      background-image: url("./sp-tu-van-ky-thuat.jpeg");
+    }
+
+    .service-text {
+      position: absolute;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
+      padding: 7px 4px;
+      border-radius: 11px;
+      background: rgba(244, 248, 251, .90);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--deep);
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0,0,0,.15);
+    }
+
+    .service-text strong {
+      display: block;
+      font-size: 9.5px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .bottom-space {
+      display: none;
+    }
+
+    @media (max-height: 720px) {
+      .ecard {
+        height: min(97svh, 700px);
+      }
+
+      .hero {
+        height: 205px;
+      }
+
+      .avatar-industrial {
+        width: 82px;
+        height: 82px;
+        margin-top: -52px;
+      }
+
+      .brand h1 {
+        font-size: 27px;
+      }
+
+      .brand p {
+        margin-bottom: 10px;
+      }
+
+      .contact-row {
+        gap: 7px;
+      }
+
+      .btn-oval {
+        min-height: 37px;
+        padding: 6px 8px;
+        font-size: 11px;
+      }
+
+      .btn-oval .btn-ico {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+      }
+
+      .btn-info {
+        min-height: 33px;
+        font-size: 11.5px;
+      }
+
+      .socials {
+        padding-top: 8px;
+      }
+
+      .service-grid {
+        padding-bottom: 14px;
+      }
+
+      .service {
+        height: 124px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        padding: 7px;
+      }
+
+      .ecard {
+        border-radius: 30px;
+      }
+
+      .contact-row {
+        gap: 7px;
+        padding: 0 14px;
+      }
+
+      .service-grid {
+        gap: 7px;
+        padding: 0 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="ecard">
+      <div class="top">
+        <div class="notch"></div>
+        <div class="hero"></div>
+        <div class="wave"></div>
+      </div>
+
+      <div class="avatar-industrial" aria-label="Avatar công nghiệp">
+        <img src="./avatar-industrial.png" alt="Logo PowerLink Industrial" />
+      </div>
+
+      <div class="brand">
+        <h1>PowerLink Industrial</h1>
+        <p>Giải pháp truyền động · Vận hành bền bỉ</p>
+      </div>
+
+      <div class="contact-row" id="contact">
+        <a class="btn-oval blue" href="tel:0969155751">
+          <span class="btn-ico">☎</span>
+          <span>Gọi</span>
+        </a>
+
+        <a class="btn-oval light" href="https://zalo.me/0969155751">
+          <span class="btn-ico">Z</span>
+          <span>Zalo</span>
+        </a>
+
+        <a class="btn-oval light" href="#contact">
+          <span class="btn-ico">+</span>
+          <span>Lưu</span>
+        </a>
+      </div>
+
+      <div class="info-row">
+        <a class="btn-info" href="./thong-tin.html">
+          <span class="btn-ico">i</span>
+          <span>Thông tin / Báo giá</span>
+        </a>
+      </div>
+
+      <div class="meta">
+        <span>📍 KCN Sóng Thần, Bình Dương</span>
+        <span>⏱ 08:00 - 17:30</span>
+      </div>
+
+      <div class="socials">
+        <span>f</span>
+        <span>in</span>
+        <span>▶</span>
+        <span>⌖</span>
+      </div>
+
+      <div class="service-grid">
+        <div class="service bearing">
+          <div class="service-text">
+            <strong>Vòng bi</strong>
+          </div>
+        </div>
+
+        <div class="service chain">
+          <div class="service-text">
+            <strong>Xích CN</strong>
+          </div>
+        </div>
+
+        <div class="service belt">
+          <div class="service-text">
+            <strong>Dây curoa</strong>
+          </div>
+        </div>
+
+        <div class="service tech">
+          <div class="service-text">
+            <strong>Tư vấn</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-space"></div>
+    </section>
+  </main>
+
+  <script src="../assets/js/shared.js"></script>
+</body>
+</html>
