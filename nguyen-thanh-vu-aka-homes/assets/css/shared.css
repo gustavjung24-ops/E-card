@@ -1971,3 +1971,159 @@ body {
     margin-top: -46px !important;
   }
 }
+
+/* ===== FINAL FIX AKA HOMES: CARD IMAGE FULL COVER + FONT ===== */
+
+/* Font hỗ trợ tiếng Việt tốt hơn */
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Giữ tiêu đề nhìn sang hơn nhưng vẫn hỗ trợ tiếng Việt */
+.brand-text h1,
+.section-title p,
+.detail-hero-content h1,
+.detail-title h2 {
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+
+/* 4 card dịch vụ: ảnh 75%, text 25% */
+body.home-page .service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 9px !important;
+  align-items: stretch !important;
+}
+
+body.home-page .service-card {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 152px !important;
+  min-height: 152px !important;
+  max-height: 152px !important;
+  display: grid !important;
+  grid-template-rows: 75% 25% !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+}
+
+/* Quan trọng: ép ảnh phủ kín vùng ảnh, không hở ngang */
+body.home-page .service-card > img {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+/* Text 25% */
+body.home-page .service-card > div {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 4px 4px 5px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background: #fffaf0 !important;
+}
+
+/* Text gọn để nhường diện tích cho ảnh */
+body.home-page .service-card h2 {
+  margin: 0 0 2px !important;
+  width: 100% !important;
+  min-height: auto !important;
+  max-height: 13px !important;
+  font: 700 8.8px/1.1 Arial, sans-serif !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+body.home-page .service-card p {
+  margin: 0 !important;
+  width: 100% !important;
+  max-height: 11px !important;
+  font: 500 6.7px/1.1 Arial, sans-serif !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Canh riêng từng loại ảnh */
+body.home-page .service-card img[src*="sp-can-ho"] {
+  object-position: center bottom !important;
+}
+
+body.home-page .service-card img[src*="sp-nha-pho"] {
+  object-position: center bottom !important;
+}
+
+body.home-page .service-card img[src*="sp-dat-nen"] {
+  object-position: center center !important;
+}
+
+body.home-page .service-card img[src*="sp-cho-thue"] {
+  object-position: center center !important;
+}
+
+/* Avatar khách to hơn và nhích lên hero */
+body.home-page .avatar {
+  width: 94px !important;
+  height: 94px !important;
+  margin-top: -52px !important;
+}
+
+body.home-page .avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+/* Mobile */
+@media (max-width: 430px) {
+  body.home-page .service-card {
+    height: 146px !important;
+    min-height: 146px !important;
+    max-height: 146px !important;
+  }
+
+  body.home-page .avatar {
+    width: 90px !important;
+    height: 90px !important;
+    margin-top: -50px !important;
+  }
+}
+
+/* Màn thấp */
+@media (max-height: 760px) {
+  body.home-page .service-card {
+    height: 138px !important;
+    min-height: 138px !important;
+    max-height: 138px !important;
+  }
+
+  body.home-page .avatar {
+    width: 84px !important;
+    height: 84px !important;
+    margin-top: -46px !important;
+  }
+}
