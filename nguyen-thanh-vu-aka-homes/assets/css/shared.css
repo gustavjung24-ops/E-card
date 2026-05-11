@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --cream: #f8f1e6;
   --cream-2: #fffaf2;
   --beige: #e9dcc8;
@@ -723,9 +723,9 @@ body.detail-page {
   }
 }
 
-/* ===== FIX MẪU 02 SPA ===== */
+/* ===== FIX MáºªU 02 SPA ===== */
 
-/* 1) Hero lớn hơn, bớt mất không gian */
+/* 1) Hero lá»›n hÆ¡n, bá»›t máº¥t khÃ´ng gian */
 .hero-wrap {
   height: 33% !important;
   min-height: 220px !important;
@@ -745,7 +745,7 @@ body.detail-page {
   margin-top: -42px !important;
 }
 
-/* 2) Nút Zalo chỉ còn 1 icon + 1 text */
+/* 2) NÃºt Zalo chá»‰ cÃ²n 1 icon + 1 text */
 .zalo-btn .zalo-icon {
   width: 22px;
   height: 22px;
@@ -759,7 +759,7 @@ body.detail-page {
   font: 700 11px/1 Arial, sans-serif;
 }
 
-/* 3) Service cards không bị bể, không bị kéo cao quá */
+/* 3) Service cards khÃ´ng bá»‹ bá»ƒ, khÃ´ng bá»‹ kÃ©o cao quÃ¡ */
 .service-grid {
   flex: 0 0 auto !important;
   min-height: auto !important;
@@ -812,7 +812,7 @@ body.detail-page {
   display: block !important;
 }
 
-/* 4) Social icons thật, không còn chữ giả */
+/* 4) Social icons tháº­t, khÃ´ng cÃ²n chá»¯ giáº£ */
 .social-row {
   gap: 16px !important;
   padding-top: 10px !important;
@@ -848,7 +848,7 @@ body.detail-page {
   stroke: none;
 }
 
-/* Tinh chỉnh thêm cho mobile */
+/* Tinh chá»‰nh thÃªm cho mobile */
 @media (max-width: 430px) {
   .hero-wrap {
     height: 31% !important;
@@ -918,7 +918,7 @@ body.detail-page {
 
 /* ===== FIX LOGO + SERVICE CARD + SOCIAL COLOR ===== */
 
-/* Logo/avatar: tránh vỡ layout khi ảnh load chậm */
+/* Logo/avatar: trÃ¡nh vá»¡ layout khi áº£nh load cháº­m */
 .avatar {
   background: #fffaf2 !important;
   border: 5px solid rgba(255, 255, 255, 0.96) !important;
@@ -932,7 +932,7 @@ body.detail-page {
   object-position: center !important;
 }
 
-/* 4 card dịch vụ: cân lại, đều nhau, không lệch quá nhiều */
+/* 4 card dá»‹ch vá»¥: cÃ¢n láº¡i, Ä‘á»u nhau, khÃ´ng lá»‡ch quÃ¡ nhiá»u */
 .service-grid {
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
@@ -995,7 +995,7 @@ body.detail-page {
   overflow: hidden !important;
 }
 
-/* Social icons: có màu đúng từng mạng xã hội */
+/* Social icons: cÃ³ mÃ u Ä‘Ãºng tá»«ng máº¡ng xÃ£ há»™i */
 .social-row {
   gap: 18px !important;
   padding-top: 14px !important;
@@ -1021,7 +1021,7 @@ body.detail-page {
   color: #1877f2 !important;
 }
 
-/* Instagram: dùng nền gradient, icon trắng */
+/* Instagram: dÃ¹ng ná»n gradient, icon tráº¯ng */
 .social-row .instagram {
   color: #ffffff !important;
   background:
@@ -1044,7 +1044,7 @@ body.detail-page {
   color: #ea4335 !important;
 }
 
-/* Nếu màn thấp thì giảm nhẹ để vẫn fit 1 màn hình */
+/* Náº¿u mÃ n tháº¥p thÃ¬ giáº£m nháº¹ Ä‘á»ƒ váº«n fit 1 mÃ n hÃ¬nh */
 @media (max-height: 760px) {
   .service-grid {
     gap: 8px !important;
@@ -1117,9 +1117,9 @@ body.detail-page {
   }
 }
 
-/* ===== FIX HERO TO HƠN + GIẢM KHOẢNG TRỐNG PHÍA DƯỚI ===== */
+/* ===== FIX HERO TO HÆ N + GIáº¢M KHOáº¢NG TRá»NG PHÃA DÆ¯á»šI ===== */
 
-/* 1) Hero cao hơn và ảnh zoom rõ hơn */
+/* 1) Hero cao hÆ¡n vÃ  áº£nh zoom rÃµ hÆ¡n */
 .hero-wrap {
   height: 36% !important;
   min-height: 245px !important;
@@ -1135,13 +1135,13 @@ body.detail-page {
   transform-origin: center center !important;
 }
 
-/* Giảm độ ăn sâu của khối cong trắng để lộ ảnh nhiều hơn */
+/* Giáº£m Ä‘á»™ Äƒn sÃ¢u cá»§a khá»‘i cong tráº¯ng Ä‘á»ƒ lá»™ áº£nh nhiá»u hÆ¡n */
 .hero-wrap::after {
   bottom: -18px !important;
   height: 42px !important;
 }
 
-/* 2) Phần content dưới hero gọn hơn để bớt dư chân */
+/* 2) Pháº§n content dÆ°á»›i hero gá»n hÆ¡n Ä‘á»ƒ bá»›t dÆ° chÃ¢n */
 .brand-card {
   height: 64% !important;
   padding: 0 16px 6px !important;
@@ -1169,7 +1169,7 @@ body.detail-page {
   line-height: 1.3 !important;
 }
 
-/* 3) Siết các nút cho gọn hơn */
+/* 3) Siáº¿t cÃ¡c nÃºt cho gá»n hÆ¡n */
 .action-grid {
   gap: 8px !important;
   margin: 12px 0 8px !important;
@@ -1181,7 +1181,7 @@ body.detail-page {
   font-size: 12px !important;
 }
 
-/* 4) Siết phần meta */
+/* 4) Siáº¿t pháº§n meta */
 .meta-row {
   gap: 6px !important;
   margin: 0 0 8px !important;
@@ -1193,7 +1193,7 @@ body.detail-page {
   line-height: 1.2 !important;
 }
 
-/* 5) Tiêu đề dịch vụ gọn hơn */
+/* 5) TiÃªu Ä‘á» dá»‹ch vá»¥ gá»n hÆ¡n */
 .section-title {
   margin: 0 0 8px !important;
 }
@@ -1203,7 +1203,7 @@ body.detail-page {
   line-height: 1.2 !important;
 }
 
-/* 6) 4 card dưới thấp lại để đỡ chiếm chỗ và cân hơn */
+/* 6) 4 card dÆ°á»›i tháº¥p láº¡i Ä‘á»ƒ Ä‘á»¡ chiáº¿m chá»— vÃ  cÃ¢n hÆ¡n */
 .service-grid {
   gap: 8px !important;
   margin-top: 2px !important;
@@ -1255,7 +1255,7 @@ body.detail-page {
   overflow: hidden !important;
 }
 
-/* 7) Giảm mạnh khoảng trống phía dưới */
+/* 7) Giáº£m máº¡nh khoáº£ng trá»‘ng phÃ­a dÆ°á»›i */
 .social-row {
   padding-top: 8px !important;
   margin-top: 4px !important;
@@ -1267,7 +1267,7 @@ body.detail-page {
   height: 34px !important;
 }
 
-/* 8) Nếu màn hình thấp thì siết thêm để tránh dư chân */
+/* 8) Náº¿u mÃ n hÃ¬nh tháº¥p thÃ¬ siáº¿t thÃªm Ä‘á»ƒ trÃ¡nh dÆ° chÃ¢n */
 @media (max-height: 760px) {
   .hero-wrap {
     height: 35% !important;
@@ -1334,7 +1334,7 @@ body.detail-page {
   }
 }
 
-/* 9) Mobile 390-430px: vẫn giữ hero to nhưng gọn chân */
+/* 9) Mobile 390-430px: váº«n giá»¯ hero to nhÆ°ng gá»n chÃ¢n */
 @media (max-width: 430px) {
   .hero-wrap {
     height: 35% !important;
@@ -1368,9 +1368,9 @@ body.detail-page {
   }
 }
 
-/* ===== FIX CUỐI: ĐẨY CỤM DỊCH VỤ XUỐNG + TĂNG CARD ẢNH ===== */
+/* ===== FIX CUá»I: Äáº¨Y Cá»¤M Dá»ŠCH Vá»¤ XUá»NG + TÄ‚NG CARD áº¢NH ===== */
 
-/* Đẩy cụm dịch vụ xuống để dùng khoảng trống dưới */
+/* Äáº©y cá»¥m dá»‹ch vá»¥ xuá»‘ng Ä‘á»ƒ dÃ¹ng khoáº£ng trá»‘ng dÆ°á»›i */
 .section-title {
   margin-top: 12px !important;
   margin-bottom: 10px !important;
@@ -1381,7 +1381,7 @@ body.detail-page {
   line-height: 1.2 !important;
 }
 
-/* 4 card cao hơn, ảnh rõ hơn */
+/* 4 card cao hÆ¡n, áº£nh rÃµ hÆ¡n */
 .service-grid {
   gap: 9px !important;
   margin-top: 4px !important;
@@ -1437,7 +1437,7 @@ body.detail-page {
   overflow: hidden !important;
 }
 
-/* Icon mạng xã hội xuống theo cụm dịch vụ, không dính sát card */
+/* Icon máº¡ng xÃ£ há»™i xuá»‘ng theo cá»¥m dá»‹ch vá»¥, khÃ´ng dÃ­nh sÃ¡t card */
 .social-row {
   margin-top: 16px !important;
   padding-top: 0 !important;
@@ -1449,7 +1449,7 @@ body.detail-page {
   height: 36px !important;
 }
 
-/* Màn hình thấp: vẫn tăng card nhưng giảm nhẹ để không tràn */
+/* MÃ n hÃ¬nh tháº¥p: váº«n tÄƒng card nhÆ°ng giáº£m nháº¹ Ä‘á»ƒ khÃ´ng trÃ n */
 @media (max-height: 760px) {
   .section-title {
     margin-top: 8px !important;
@@ -1526,7 +1526,7 @@ body.detail-page {
   }
 }
 
-/* ===== THEME MẪU 06 - BẤT ĐỘNG SẢN ===== */
+/* ===== THEME MáºªU 06 - Báº¤T Äá»˜NG Sáº¢N ===== */
 
 :root {
   --cream: #f4ead7;
@@ -1750,9 +1750,9 @@ body {
   }
 }
 
-/* ===== FIX MẪU 06: 4 CARD ẢNH 75% - TEXT 25% ===== */
+/* ===== FIX MáºªU 06: 4 CARD áº¢NH 75% - TEXT 25% ===== */
 
-/* Card dịch vụ bất động sản: ảnh chiếm 75%, text chiếm 25% */
+/* Card dá»‹ch vá»¥ báº¥t Ä‘á»™ng sáº£n: áº£nh chiáº¿m 75%, text chiáº¿m 25% */
 .service-grid {
   gap: 9px !important;
   margin-top: 5px !important;
@@ -1769,7 +1769,7 @@ body {
   overflow: hidden !important;
 }
 
-/* Ảnh cao hơn, nhìn rõ gốc/công trình hơn */
+/* áº¢nh cao hÆ¡n, nhÃ¬n rÃµ gá»‘c/cÃ´ng trÃ¬nh hÆ¡n */
 .service-card img {
   width: 100% !important;
   height: 100% !important;
@@ -1779,7 +1779,7 @@ body {
   display: block !important;
 }
 
-/* Text chiếm 25%, gọn lại */
+/* Text chiáº¿m 25%, gá»n láº¡i */
 .service-card div {
   height: 100% !important;
   min-height: 0 !important;
@@ -1791,7 +1791,7 @@ body {
   text-align: center !important;
 }
 
-/* Tiêu đề nhỏ hơn để không chiếm ảnh */
+/* TiÃªu Ä‘á» nhá» hÆ¡n Ä‘á»ƒ khÃ´ng chiáº¿m áº£nh */
 .service-card h2 {
   margin: 0 0 2px !important;
   min-height: 12px !important;
@@ -1803,7 +1803,7 @@ body {
   text-overflow: ellipsis !important;
 }
 
-/* Mô tả nhỏ, tối đa 1 dòng */
+/* MÃ´ táº£ nhá», tá»‘i Ä‘a 1 dÃ²ng */
 .service-card p {
   margin: 0 !important;
   max-height: 11px !important;
@@ -1814,7 +1814,7 @@ body {
   text-overflow: ellipsis !important;
 }
 
-/* Canh riêng từng ảnh để không mất gốc/lệch bố cục */
+/* Canh riÃªng tá»«ng áº£nh Ä‘á»ƒ khÃ´ng máº¥t gá»‘c/lá»‡ch bá»‘ cá»¥c */
 .service-card img[src*="sp-can-ho"] {
   object-position: center bottom !important;
 }
@@ -1831,7 +1831,7 @@ body {
   object-position: center center !important;
 }
 
-/* Màn hình thấp: giảm nhẹ chiều cao nhưng vẫn giữ 75/25 */
+/* MÃ n hÃ¬nh tháº¥p: giáº£m nháº¹ chiá»u cao nhÆ°ng váº«n giá»¯ 75/25 */
 @media (max-height: 760px) {
   .service-card {
     height: 140px !important;
@@ -1871,9 +1871,9 @@ body {
   }
 }
 
-/* ===== FIX KHÁCH NGUYỄN THANH VŨ - AKA HOMES ===== */
+/* ===== FIX KHÃCH NGUYá»„N THANH VÅ¨ - AKA HOMES ===== */
 
-/* 1) Avatar khách to hơn và nhích lên chồng vào hero rõ hơn */
+/* 1) Avatar khÃ¡ch to hÆ¡n vÃ  nhÃ­ch lÃªn chá»“ng vÃ o hero rÃµ hÆ¡n */
 .avatar {
   width: 94px !important;
   height: 94px !important;
@@ -1892,12 +1892,12 @@ body {
   display: block !important;
 }
 
-/* 2) Bù lại chiều cao để avatar to không làm tràn màn */
+/* 2) BÃ¹ láº¡i chiá»u cao Ä‘á»ƒ avatar to khÃ´ng lÃ m trÃ n mÃ n */
 .brand-card {
   padding-top: 0 !important;
 }
 
-/* 3) 4 card: ảnh phải phủ sát ngang card, không hở hai bên */
+/* 3) 4 card: áº£nh pháº£i phá»§ sÃ¡t ngang card, khÃ´ng há»Ÿ hai bÃªn */
 .service-card {
   padding: 0 !important;
   overflow: hidden !important;
@@ -1916,13 +1916,13 @@ body {
   border: 0 !important;
 }
 
-/* Ép phần ảnh chiếm 75%, text 25% */
+/* Ã‰p pháº§n áº£nh chiáº¿m 75%, text 25% */
 .service-card {
   display: grid !important;
   grid-template-rows: 75% 25% !important;
 }
 
-/* Text vẫn gọn, không chiếm ảnh */
+/* Text váº«n gá»n, khÃ´ng chiáº¿m áº£nh */
 .service-card div {
   width: 100% !important;
   height: 100% !important;
@@ -1931,7 +1931,7 @@ body {
   background: #fffaf0 !important;
 }
 
-/* 4) Canh riêng từng ảnh bất động sản */
+/* 4) Canh riÃªng tá»«ng áº£nh báº¥t Ä‘á»™ng sáº£n */
 .service-card img[src*="sp-can-ho"] {
   object-position: center bottom !important;
 }
@@ -1948,7 +1948,7 @@ body {
   object-position: center center !important;
 }
 
-/* 5) Facebook dùng link thật, icon giữ màu xanh */
+/* 5) Facebook dÃ¹ng link tháº­t, icon giá»¯ mÃ u xanh */
 .social-row .facebook {
   color: #1877f2 !important;
   background: #ffffff !important;
@@ -1963,7 +1963,7 @@ body {
   }
 }
 
-/* Màn hình thấp */
+/* MÃ n hÃ¬nh tháº¥p */
 @media (max-height: 760px) {
   .avatar {
     width: 84px !important;
@@ -1974,7 +1974,7 @@ body {
 
 /* ===== FINAL FIX AKA HOMES: CARD IMAGE FULL COVER + FONT ===== */
 
-/* Font hỗ trợ tiếng Việt tốt hơn */
+/* Font há»— trá»£ tiáº¿ng Viá»‡t tá»‘t hÆ¡n */
 html,
 body,
 button,
@@ -1986,7 +1986,7 @@ select {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Giữ tiêu đề nhìn sang hơn nhưng vẫn hỗ trợ tiếng Việt */
+/* Giá»¯ tiÃªu Ä‘á» nhÃ¬n sang hÆ¡n nhÆ°ng váº«n há»— trá»£ tiáº¿ng Viá»‡t */
 .brand-text h1,
 .section-title p,
 .detail-hero-content h1,
@@ -1994,7 +1994,7 @@ select {
   font-family: Georgia, "Times New Roman", serif !important;
 }
 
-/* 4 card dịch vụ: ảnh 75%, text 25% */
+/* 4 card dá»‹ch vá»¥: áº£nh 75%, text 25% */
 body.home-page .service-grid {
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
@@ -2014,7 +2014,7 @@ body.home-page .service-card {
   border-radius: 16px !important;
 }
 
-/* Quan trọng: ép ảnh phủ kín vùng ảnh, không hở ngang */
+/* Quan trá»ng: Ã©p áº£nh phá»§ kÃ­n vÃ¹ng áº£nh, khÃ´ng há»Ÿ ngang */
 body.home-page .service-card > img {
   width: 100% !important;
   min-width: 100% !important;
@@ -2045,7 +2045,7 @@ body.home-page .service-card > div {
   background: #fffaf0 !important;
 }
 
-/* Text gọn để nhường diện tích cho ảnh */
+/* Text gá»n Ä‘á»ƒ nhÆ°á»ng diá»‡n tÃ­ch cho áº£nh */
 body.home-page .service-card h2 {
   margin: 0 0 2px !important;
   width: 100% !important;
@@ -2067,7 +2067,7 @@ body.home-page .service-card p {
   text-overflow: ellipsis !important;
 }
 
-/* Canh riêng từng loại ảnh */
+/* Canh riÃªng tá»«ng loáº¡i áº£nh */
 body.home-page .service-card img[src*="sp-can-ho"] {
   object-position: center bottom !important;
 }
@@ -2084,7 +2084,7 @@ body.home-page .service-card img[src*="sp-cho-thue"] {
   object-position: center center !important;
 }
 
-/* Avatar khách to hơn và nhích lên hero */
+/* Avatar khÃ¡ch to hÆ¡n vÃ  nhÃ­ch lÃªn hero */
 body.home-page .avatar {
   width: 94px !important;
   height: 94px !important;
@@ -2113,7 +2113,7 @@ body.home-page .avatar img {
   }
 }
 
-/* Màn thấp */
+/* MÃ n tháº¥p */
 @media (max-height: 760px) {
   body.home-page .service-card {
     height: 138px !important;
@@ -2202,7 +2202,7 @@ body.home-page .service-card p {
   text-overflow: ellipsis !important;
 }
 
-/* Avatar khách */
+/* Avatar khÃ¡ch */
 body.home-page .avatar {
   width: 94px !important;
   height: 94px !important;
@@ -2216,7 +2216,7 @@ body.home-page .avatar img {
   object-position: center top !important;
 }
 
-/* Font tiếng Việt */
+/* Font tiáº¿ng Viá»‡t */
 html,
 body,
 button,
@@ -2238,5 +2238,138 @@ select {
     width: 90px !important;
     height: 90px !important;
     margin-top: -50px !important;
+  }
+}
+
+/* ===== AKA HOMES FINAL OVERRIDE 03 ===== */
+
+/* Font tiếng Việt sạch */
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+.brand-text h1,
+.section-title p,
+.detail-hero-content h1,
+.detail-title h2 {
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+
+/* Avatar khách to hơn và chồng vào hero */
+body.home-page .avatar {
+  width: 96px !important;
+  height: 96px !important;
+  margin-top: -56px !important;
+  margin-bottom: 4px !important;
+  border: 5px solid rgba(216, 181, 109, 0.96) !important;
+  background: #fffaf0 !important;
+  box-shadow: 0 14px 34px rgba(12, 28, 22, 0.28) !important;
+}
+
+body.home-page .avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+/* 4 card: layout ảnh 75%, text 25% */
+body.home-page .service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  align-items: stretch !important;
+  margin-top: 5px !important;
+}
+
+body.home-page .service-card {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 150px !important;
+  min-height: 150px !important;
+  max-height: 150px !important;
+  display: grid !important;
+  grid-template-rows: 75% 25% !important;
+  overflow: hidden !important;
+  border-radius: 15px !important;
+  background: #fffaf0 !important;
+}
+
+/* Quan trọng: ảnh là block sát viền, không hở ngang */
+body.home-page .service-card > img {
+  grid-row: 1 / 2 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Text 25% */
+body.home-page .service-card > div {
+  grid-row: 2 / 3 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 4px 4px 5px !important;
+  margin: 0 !important;
+  background: #fffaf0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+body.home-page .service-card h2 {
+  width: 100% !important;
+  margin: 0 0 2px !important;
+  max-height: 13px !important;
+  font: 700 8.7px/1.1 Arial, "Helvetica Neue", sans-serif !important;
+  color: #183024 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+body.home-page .service-card p {
+  width: 100% !important;
+  margin: 0 !important;
+  max-height: 11px !important;
+  font: 500 6.6px/1.1 Arial, "Helvetica Neue", sans-serif !important;
+  color: #766141 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Mobile */
+@media (max-width: 430px) {
+  body.home-page .avatar {
+    width: 92px !important;
+    height: 92px !important;
+    margin-top: -53px !important;
+  }
+
+  body.home-page .service-card {
+    height: 146px !important;
+    min-height: 146px !important;
+    max-height: 146px !important;
   }
 }
