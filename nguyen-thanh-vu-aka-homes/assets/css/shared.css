@@ -2127,3 +2127,116 @@ body.home-page .avatar img {
     margin-top: -46px !important;
   }
 }
+
+/* ===== FINAL CARD IMAGE FULL-BLEED FIX - AKA HOMES ===== */
+
+body.home-page .service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 9px !important;
+  align-items: stretch !important;
+}
+
+body.home-page .service-card {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 152px !important;
+  min-height: 152px !important;
+  max-height: 152px !important;
+  display: grid !important;
+  grid-template-rows: 75% 25% !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  background: #fffaf0 !important;
+}
+
+body.home-page .service-card > img {
+  grid-row: 1 / 2 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+body.home-page .service-card > div {
+  grid-row: 2 / 3 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 4px 4px 5px !important;
+  margin: 0 !important;
+  background: #fffaf0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+body.home-page .service-card h2 {
+  margin: 0 0 2px !important;
+  width: 100% !important;
+  max-height: 13px !important;
+  font: 700 8.8px/1.1 Arial, "Helvetica Neue", sans-serif !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+body.home-page .service-card p {
+  margin: 0 !important;
+  width: 100% !important;
+  max-height: 11px !important;
+  font: 500 6.7px/1.1 Arial, "Helvetica Neue", sans-serif !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Avatar khách */
+body.home-page .avatar {
+  width: 94px !important;
+  height: 94px !important;
+  margin-top: -52px !important;
+}
+
+body.home-page .avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+/* Font tiếng Việt */
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 430px) {
+  body.home-page .service-card {
+    height: 146px !important;
+    min-height: 146px !important;
+    max-height: 146px !important;
+  }
+
+  body.home-page .avatar {
+    width: 90px !important;
+    height: 90px !important;
+    margin-top: -50px !important;
+  }
+}
