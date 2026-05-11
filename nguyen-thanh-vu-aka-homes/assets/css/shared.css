@@ -2373,3 +2373,90 @@ body.home-page .service-card p {
     max-height: 146px !important;
   }
 }
+
+/* ===== FINAL FIX: AVATAR KHÔNG BỊ MÓP TRÊN MỌI ĐIỆN THOẠI ===== */
+
+body.home-page .avatar {
+  width: clamp(78px, 22vw, 96px) !important;
+  height: clamp(78px, 22vw, 96px) !important;
+  min-width: clamp(78px, 22vw, 96px) !important;
+  min-height: clamp(78px, 22vw, 96px) !important;
+  max-width: 96px !important;
+  max-height: 96px !important;
+
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+
+  border-radius: 50% !important;
+  overflow: hidden !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: clamp(-54px, -11vw, -42px) !important;
+  margin-bottom: 4px !important;
+
+  display: block !important;
+  position: relative !important;
+  z-index: 5 !important;
+
+  background: #fffaf0 !important;
+  border: 5px solid rgba(216, 181, 109, 0.96) !important;
+  box-shadow: 0 14px 34px rgba(12, 28, 22, 0.28) !important;
+}
+
+body.home-page .avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+
+  aspect-ratio: 1 / 1 !important;
+  display: block !important;
+
+  object-fit: cover !important;
+  object-position: center top !important;
+
+  border-radius: 50% !important;
+  transform: none !important;
+}
+
+body.home-page .brand-card {
+  min-height: 0 !important;
+}
+
+@media (max-width: 390px) {
+  body.home-page .avatar {
+    width: 82px !important;
+    height: 82px !important;
+    min-width: 82px !important;
+    min-height: 82px !important;
+    max-width: 82px !important;
+    max-height: 82px !important;
+    margin-top: -44px !important;
+  }
+}
+
+@media (max-height: 720px) {
+  body.home-page .avatar {
+    width: 76px !important;
+    height: 76px !important;
+    min-width: 76px !important;
+    min-height: 76px !important;
+    max-width: 76px !important;
+    max-height: 76px !important;
+    margin-top: -40px !important;
+  }
+}
+
+@media (width <= 380px) and (height <= 820px) {
+  body.home-page .avatar {
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    margin-top: -42px !important;
+  }
+}
