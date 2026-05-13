@@ -1,10 +1,11 @@
-﻿BEGIN:VCARD
+BEGIN:VCARD
 VERSION:3.0
-N:Salon;Tỷ;;;
-FN:Tỷ Salon
-ORG:Tỷ Salon
-TEL;TYPE=CELL:0909976148
+N:Salon;Ty;;;
+FN:Ty Salon
+ORG:Ty Salon
+TITLE:Salon toc - Since 1992
+TEL;TYPE=CELL,VOICE:0909976148
 URL:https://www.facebook.com/ty.g.cong
-ADR;TYPE=WORK:;;25 Trần Hưng Đạo, P. Gò Công;Đồng Tháp;;;Việt Nam
-NOTE:Salon tóc - Since 1992
+ADR;TYPE=WORK:;;25 Tran Hung Dao, P. Go Cong;Dong Thap;;;Viet Nam
+NOTE:Ty Salon - Salon toc tai Go Cong
 END:VCARD
