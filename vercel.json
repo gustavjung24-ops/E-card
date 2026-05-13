@@ -1,7 +1,8 @@
 ﻿{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "headers": [
     {
-      "source": "/(.*).vcf",
+      "source": "/salon-ty-go-cong/assets/files/ty-salon.vcf",
       "headers": [
         {
           "key": "Content-Type",
@@ -9,7 +10,7 @@
         },
         {
           "key": "Content-Disposition",
-          "value": "attachment"
+          "value": "attachment; filename=\"ty-salon.vcf\""
         }
       ]
     }
