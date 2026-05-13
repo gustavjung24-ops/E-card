@@ -559,6 +559,44 @@ body.detail-page {
   font: 700 15px/1 Arial, sans-serif;
 }
 
+.qr-ecard-block {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  text-align: center;
+}
+
+.qr-ecard-block > p:not(.small-label) {
+  margin: 0 0 10px;
+  font: 400 14px/1.5 Arial, sans-serif;
+  color: #766b60;
+}
+
+.qr-ecard-block img {
+  display: block;
+  margin: 12px auto;
+  max-width: 220px;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  box-shadow: 0 10px 28px rgba(26, 26, 26, 0.08);
+}
+
+.qr-url-hint {
+  margin: 12px 0 0 !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  word-break: break-all;
+}
+
+.qr-url-hint a {
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 175, 55, 0.55);
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 760px) {
   body.detail-page {
     background: var(--cream);
