@@ -6,11 +6,15 @@
       "headers": [
         {
           "key": "Content-Type",
-          "value": "text/vcard; charset=utf-8"
+          "value": "text/x-vcard; charset=utf-8"
         },
         {
           "key": "Content-Disposition",
-          "value": "attachment; filename=\"ty-salon.vcf\""
+          "value": "inline; filename=\"ty-salon.vcf\""
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
         }
       ]
     }
