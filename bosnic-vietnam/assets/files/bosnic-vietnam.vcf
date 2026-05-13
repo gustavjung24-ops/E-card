@@ -2,10 +2,11 @@ BEGIN:VCARD
 VERSION:3.0
 N:Vietnam;Bosnic;;;
 FN:Bosnic Vietnam
-ORG:Bosnic Vietnam
-TITLE:My pham toc chuyen nghiep
+ORG:CÔNG TY TNHH THƯƠNG MẠI VN BOSNIC
+TITLE:Mỹ phẩm tóc chuyên nghiệp
 TEL;TYPE=CELL:0937098690
 URL:https://www.facebook.com/bosnicvietnam
-ADR;TYPE=WORK:;;TP.HCM;;;;Viet Nam
-NOTE:Bosnic Vietnam - My pham toc Han Quoc, san pham cham soc toc chuyen nghiep danh cho salon
+URL:https://shopee.vn/myphamtocbosnic
+ADR;TYPE=WORK:;;355-356M Đoàn Văn Bơ;Phường Khánh Hội;TP.HCM;;Viet Nam
+NOTE:BOSNIC - Mỹ phẩm tóc Hàn Quốc · Chăm sóc tóc chuyên nghiệp dành cho salon
 END:VCARD

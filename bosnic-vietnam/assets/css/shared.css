@@ -25,7 +25,7 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: "Times New Roman", Georgia, serif;
-  color: var(--gold);
+  color: var(--black-2);
   background:
     radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.9), transparent 28%),
     radial-gradient(circle at 85% 18%, rgba(197, 164, 106, 0.18), transparent 30%),
@@ -71,7 +71,7 @@ img {
   height: 260px;
   left: -90px;
   bottom: -90px;
-  background: rgba(83, 105, 71, 0.14);
+  background: rgba(212, 175, 55, 0.12);
 }
 
 .app-shell::after {
@@ -173,7 +173,14 @@ img {
 .slogan {
   margin: 8px 0 0;
   font: 400 13px/1.35 Arial, sans-serif;
-  color: var(--white);
+  color: #5c5349;
+}
+
+.slogan-sub {
+  margin: 4px 0 0;
+  font: 500 11px/1.35 Arial, sans-serif;
+  color: var(--gray);
+  letter-spacing: 0.02em;
 }
 
 .action-grid {
@@ -192,7 +199,7 @@ img {
   gap: 8px;
   padding: 0 14px;
   font: 700 13px/1 Arial, sans-serif;
-  border: 1px solid rgba(83, 105, 71, 0.15);
+  border: 1px solid rgba(26, 26, 26, 0.1);
   box-shadow: 0 8px 18px rgba(91, 74, 60, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -208,8 +215,14 @@ img {
 }
 
 .btn.light {
-  color: var(--gold);
+  color: var(--black);
   background: rgba(255, 255, 255, 0.88);
+}
+
+.btn.accent-shop {
+  color: #fff;
+  background: linear-gradient(135deg, #ee4d2d, #ff7337);
+  border: 1px solid rgba(238, 77, 45, 0.35);
 }
 
 .icon {
@@ -333,7 +346,7 @@ img {
   border-radius: 50%;
   color: var(--black);
   background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(83, 105, 71, 0.18);
+  border: 1px solid rgba(26, 26, 26, 0.18);
   font: 700 18px/1 Arial, sans-serif;
   box-shadow: 0 8px 18px rgba(91, 74, 60, 0.08);
 }
@@ -523,8 +536,20 @@ body.detail-page {
   margin-bottom: 22px;
 }
 
-.info-list {
-  margin-top: 16px;
+.info-panel .info-list a {
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 175, 55, 0.55);
+  text-underline-offset: 3px;
+}
+
+.intro-panel a:not(.btn) {
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 175, 55, 0.55);
+  text-underline-offset: 3px;
 }
 
 .map-link {
@@ -828,7 +853,7 @@ body.detail-page {
   border-radius: 50% !important;
   background: rgba(255, 255, 255, 0.92) !important;
   color: var(--black) !important;
-  border: 1px solid rgba(83, 105, 71, 0.18) !important;
+  border: 1px solid rgba(26, 26, 26, 0.18) !important;
   box-shadow: 0 8px 18px rgba(91, 74, 60, 0.08) !important;
   font-size: 0 !important;
 }
@@ -844,7 +869,8 @@ body.detail-page {
 }
 
 .social-row .facebook svg,
-.social-row .tiktok svg {
+.social-row .tiktok svg,
+.social-row .shopee svg {
   fill: currentColor;
   stroke: none;
 }
@@ -1008,7 +1034,7 @@ body.detail-page {
   height: 37px !important;
   border-radius: 50% !important;
   background: #ffffff !important;
-  border: 1px solid rgba(83, 105, 71, 0.14) !important;
+  border: 1px solid rgba(26, 26, 26, 0.14) !important;
   box-shadow: 0 9px 22px rgba(91, 74, 60, 0.11) !important;
 }
 
@@ -1022,17 +1048,11 @@ body.detail-page {
   color: #1877f2 !important;
 }
 
-/* Instagram: dùng nền gradient, icon trắng */
-.social-row .instagram {
-  color: #ffffff !important;
-  background:
-    radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 12%, #fd5949 42%, #d6249f 68%, #285aeb 100%) !important;
-  border: none !important;
-}
-
-.social-row .instagram svg {
-  color: #ffffff !important;
-  stroke: #ffffff !important;
+/* Shopee */
+.social-row .shopee {
+  color: #ee4d2d !important;
+  background: #fff5f0 !important;
+  border: 1px solid rgba(238, 77, 45, 0.28) !important;
 }
 
 /* TikTok */
