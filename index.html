@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Danh sách E-Card</title>
   <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -16,7 +22,7 @@
     }
 
     main {
-      width: min(92%, 760px);
+      width: min(calc(100% - 24px), 760px);
       background: #fffaf0;
       border: 1px solid rgba(180, 140, 70, .25);
       border-radius: 24px;
@@ -57,6 +63,13 @@
     .salon {
       background: linear-gradient(135deg, #111111, #3a3a3a);
     }
+
+    .hung-phat {
+      color: #1f252b;
+      background: linear-gradient(135deg, #ffffff, #eef2f6);
+      border: 1px solid rgba(170, 176, 255, .38);
+      box-shadow: 0 12px 28px rgba(24, 33, 44, .08);
+    }
   </style>
 </head>
 <body>
@@ -82,6 +95,11 @@
       <a class="salon" href="./bosnic-vietnam/">
         Bosnic Vietnam
         <span>Mỹ phẩm tóc chuyên nghiệp / Hair cosmetics</span>
+      </a>
+
+      <a class="hung-phat" href="./hung-phat-nguyen-lieu/">
+        Hưng Phát Nguyên Liệu
+        <span>Nguyên liệu trà sữa / Mì cay / Thực phẩm đông lạnh</span>
       </a>
     </div>
   </main>
