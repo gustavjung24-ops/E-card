@@ -10,7 +10,7 @@
     :root{--navy:#10221a;--navy-2:#173B67;--accent:#BFECC8;--gold:#C99A2E;--bg:#FFFFFF;--white:#FFFFFF;--text:#18202A;--muted:#657080}
     html,body{background:var(--bg);margin:0;min-height:100%;}
     .page{display:flex;align-items:center;justify-content:center;padding:12px 8px;min-height:100vh;min-height:-webkit-fill-available}
-    .card{width:100%;max-width:410px;background:transparent;border-radius:16px;overflow:visible;display:flex;flex-direction:column}
+    .card{width:100%;max-width:410px;background:transparent;border-radius:16px;overflow:visible;display:flex;flex-direction:column;transform-origin:top center;transition:transform .12s ease}
     .hero-bg{width:100%;aspect-ratio:16/6;display:block;background-image:url('assets/images/hero-hung-phat.png');background-size:cover;background-position:50% 18%;border-radius:12px}
     .hero-copy{padding:12px 18px 0;text-align:center}
     .hero-copy p{margin:0;font-size:13px;color:var(--muted);line-height:1.5;letter-spacing:.02em}
@@ -41,6 +41,7 @@
     html,body,.page,.card{max-width:100%;overflow-x:hidden}
     @media(max-width:420px){
       .hero-bg{background-position:50% 22%}
+      .products a:nth-child(3){display:none}
       .sheet{padding:14px 14px 12px}
       .actions{gap:8px;margin:14px 0}
       .btn{height:46px;font-size:12px}
@@ -114,4 +115,37 @@
     </main>
   </div>
 </body>
+<script>
+  // Auto-fit .card to viewport height when necessary (mobile devices)
+  (function () {
+    const card = document.querySelector('.card');
+    if (!card) return;
+
+    function fitCard() {
+      // reset previous transform
+      card.style.transform = '';
+      const rect = card.getBoundingClientRect();
+      const available = window.innerHeight - 20; // small margin
+
+      if (rect.height > available) {
+        const scale = Math.max(0.78, available / rect.height); // don't scale below 78%
+        card.style.transformOrigin = 'top center';
+        card.style.transform = `scale(${scale})`;
+      } else {
+        card.style.transform = '';
+      }
+    }
+
+    // debounce helper
+    let t;
+    function onResize() {
+      clearTimeout(t);
+      t = setTimeout(fitCard, 80);
+    }
+
+    window.addEventListener('load', () => setTimeout(fitCard, 50));
+    window.addEventListener('orientationchange', onResize);
+    window.addEventListener('resize', onResize);
+  })();
+</script>
 </html>
