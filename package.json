@@ -1,0 +1,26 @@
+{
+  "name": "e-card-kh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-hung-phat-qr": "node scripts/generate-hung-phat-qr.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavjung24-ops/E-card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavjung24-ops/E-card/issues"
+  },
+  "homepage": "https://github.com/gustavjung24-ops/E-card#readme",
+  "dependencies": {
+    "jimp": "^1.6.1",
+    "qrcode": "^1.5.4",
+    "qrcode-reader": "^1.0.4"
+  }
+}
