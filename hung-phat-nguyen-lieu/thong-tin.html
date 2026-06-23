@@ -1,110 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hưng Phát - Thông tin</title>
-  <meta name="description" content="Giới thiệu Hưng Phát, nhóm sản phẩm, chính sách giao hàng và liên hệ đặt hàng." />
-  <link rel="stylesheet" href="./assets/css/shared.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hưng Phát — Thông tin</title>
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <style>html,body{background:var(--bg);margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial}</style>
 </head>
-<body class="detail-page">
-  <main class="detail-shell">
-    <header class="detail-hero">
-      <a class="back-link" href="./index.html">← Về trang chính</a>
+<body>
+  <main style="max-width:900px;margin:12px auto;padding:12px;">
+    <a href="index.html" style="display:inline-block;margin-bottom:10px;color:var(--navy);text-decoration:none">← Về trang chính</a>
 
-      <div class="detail-brand">
-        <div class="brand-mark brand-mark-detail" aria-hidden="true">
-          <img class="brand-logo" src="./assets/images/avatar-hung-phat.webp" alt="" />
-        </div>
-        <div>
-          <p class="eyebrow">Nhà phân phối</p>
-          <h1>NHÀ PHÂN PHỐI HƯNG PHÁT</h1>
-          <p class="subline">Nguyên liệu trà sữa · Mì cay · Thực phẩm đông lạnh</p>
-          <p class="person">Tân Đỗ - Nhân viên kinh doanh</p>
-        </div>
-      </div>
-
-      <div class="detail-visual" aria-hidden="true">
-        <img src="./assets/images/hero-hung-phat.webp" alt="" />
-      </div>
-    </header>
-
-    <section id="gioi-thieu" class="content-card intro-card">
-      <div class="section-kicker">Giới thiệu Hưng Phát</div>
-      <h2>Phân phối nguyên liệu cho quán, cửa hàng và đại lý</h2>
-      <p>
-        <strong>NHÀ PHÂN PHỐI HƯNG PHÁT</strong> cung cấp các nhóm nguyên liệu phục vụ pha chế và kinh doanh thực phẩm,
-        tập trung vào sự gọn gàng, ổn định và dễ đặt hàng cho khách hàng khu vực Tiền Giang và lân cận.
-      </p>
-        <p>
-          Liên hệ trực tiếp với anh <strong>Tân Đỗ</strong> để được hỗ trợ đơn hàng, lịch giao và thông tin sản phẩm phù hợp.
-        </p>
+    <section id="gioi-thieu" style="background:var(--white);padding:14px;border-radius:12px;border:1px solid var(--line);margin-bottom:12px">
+      <h2 style="margin:0 0 8px;color:var(--navy)">Giới thiệu Hưng Phát</h2>
+      <p style="margin:0 0 8px;color:var(--text)"><strong>NHÀ PHÂN PHỐI HƯNG PHÁT</strong> phân phối nguyên liệu chuyên cho trà sữa, mì cay và thực phẩm đông lạnh tại khu vực Tiền Giang. Liên hệ trực tiếp để được tư vấn và hỗ trợ đặt hàng.</p>
     </section>
 
-    <section id="san-pham" class="content-card">
-      <div class="section-kicker">Nhóm sản phẩm</div>
-      <h2>Danh mục chính</h2>
-
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="./assets/images/nguyen-lieu-tra-sua.webp" alt="Nguyên liệu trà sữa" />
-          <div>
-            <h3>Nguyên liệu trà sữa</h3>
-            <p>Nhóm nguyên liệu phục vụ mô hình trà sữa và đồ uống pha chế.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="./assets/images/nguyen-lieu-mi-cay.webp" alt="Nguyên liệu mì cay" />
-          <div>
-            <h3>Nguyên liệu mì cay</h3>
-            <p>Danh mục hàng phù hợp quán ăn, quầy bán mang đi và đại lý nhỏ.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="./assets/images/thuc-pham-dong-lanh.webp" alt="Thực phẩm đông lạnh" />
-          <div>
-            <h3>Thực phẩm đông lạnh</h3>
-            <p>Nhóm hàng phục vụ nhu cầu bán lẻ, bán sỉ và kinh doanh thực phẩm.</p>
-          </div>
-        </article>
+    <section id="san-pham" style="margin-bottom:12px">
+      <h3 style="margin:0 0 8px;color:var(--navy)">Nhóm ngành hàng</h3>
+      <div style="display:grid;gap:10px;grid-template-columns:repeat(2,1fr);">
+        <a href="#san-pham" style="text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--white)">
+          <img src="assets/images/nguyen-lieu-tra-sua.webp" alt="Nguyên liệu trà sữa" style="width:100%;height:140px;object-fit:cover;display:block">
+          <div style="padding:10px;font-weight:600;color:var(--navy)">Nguyên liệu trà sữa</div>
+        </a>
+        <a href="#san-pham" style="text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--white)">
+          <img src="assets/images/nguyen-lieu-mi-cay.webp" alt="Nguyên liệu mì cay" style="width:100%;height:140px;object-fit:cover;display:block">
+          <div style="padding:10px;font-weight:600;color:var(--navy)">Nguyên liệu mì cay</div>
+        </a>
+        <a href="#san-pham" style="grid-column:1/-1;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--white)">
+          <img src="assets/images/thuc-pham-dong-lanh.webp" alt="Thực phẩm đông lạnh" style="width:100%;height:140px;object-fit:cover;display:block">
+          <div style="padding:10px;font-weight:600;color:var(--navy)">Thực phẩm đông lạnh</div>
+        </a>
       </div>
     </section>
 
-    <section id="chinh-sach" class="content-card">
-      <div class="section-kicker">Chính sách giao hàng</div>
-      <h2>Thông tin giao nhận</h2>
-
-      <ul class="policy-list">
-        <li><strong>Tuyến giao cố định:</strong> theo tuyến giao cố định hiện có.</li>
+    <section id="chinh-sach" style="background:var(--white);padding:14px;border-radius:12px;border:1px solid var(--line);margin-bottom:12px">
+      <h3 style="margin:0 0 8px;color:var(--navy)">Chính sách giao hàng</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--text)">
         <li><strong>Đơn lẻ 3 triệu:</strong> hỗ trợ xăng 30.000 đồng.</li>
         <li><strong>Đơn 4 triệu:</strong> miễn phí giao hàng.</li>
-        <li><strong>Nhận đơn trước 11 giờ:</strong> giao trong ngày.</li>
-        <li><strong>Đơn sau 11 giờ:</strong> giao vào ngày hôm sau.</li>
+        <li><strong>Nhận đơn trước 11:00:</strong> giao trong ngày.</li>
+        <li><strong>Nhận đơn sau 11:00:</strong> giao vào ngày hôm sau.</li>
+        <li><strong>Tuyến giao cố định:</strong> giao theo lịch tuyến cố định (không tự đặt ngày ngoài tuyến).</li>
       </ul>
     </section>
 
-    <section id="lien-he" class="content-card">
-      <div class="section-kicker">Liên hệ đặt hàng</div>
-      <h2>Đặt hàng trực tiếp</h2>
-
-      <div class="contact-grid">
-        <a class="contact-btn contact-btn-dark" href="tel:0798356565">Gọi Tâm Đỗ</a>
-        <a class="contact-btn contact-btn-accent" href="https://zalo.me/0798356565" target="_blank" rel="noopener">Zalo</a>
-        <a class="contact-btn contact-btn-light" href="./assets/files/tan-do-hung-phat.vcf">Lưu liên hệ</a>
-        <a class="contact-btn contact-btn-light" href="tel:0396080168">0396 080 168</a>
-        <a class="contact-btn contact-btn-light" href="tel:0393980168">0393 980 168</a>
-      </div>
-
-      <div class="contact-meta">
-        <p><strong>Địa chỉ:</strong> 152 Yersin, Phường 4, TP. Mỹ Tho, Tiền Giang</p>
-        <p><strong>Người liên hệ:</strong> Tân Đỗ - Nhân viên kinh doanh</p>
-        <p><strong>Ngành hàng:</strong> Cung cấp nguyên liệu trà sữa, nguyên liệu mì cay, thực phẩm đông lạnh</p>
+    <section id="lien-he" style="background:var(--white);padding:14px;border-radius:12px;border:1px solid var(--line);">
+      <h3 style="margin:0 0 8px;color:var(--navy)">Liên hệ đặt hàng</h3>
+      <p style="margin:0 0 6px;color:var(--text)"><strong>Người liên hệ:</strong> Tâm Đỗ — Nhân viên kinh doanh</p>
+      <p style="margin:0 0 6px;color:var(--text)"><strong>Địa chỉ:</strong> 152 Yersin, Phường 4, TP. Mỹ Tho, Tiền Giang</p>
+      <p style="margin:0 0 6px;color:var(--text)"><strong>Hotline:</strong> 0396 080 168 · 0393 980 168</p>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <a href="tel:0798356565" style="flex:1;padding:10px;border-radius:10px;background:var(--navy);color:var(--white);text-align:center;text-decoration:none">Gọi Tâm Đỗ</a>
+        <a href="assets/files/tan-do-hung-phat.vcf" style="flex:1;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--white);text-align:center;text-decoration:none;color:var(--navy)" download>Lưu liên hệ</a>
       </div>
     </section>
   </main>
-
-  <script src="./assets/js/shared.js"></script>
 </body>
 </html>
