@@ -1,12 +1,13 @@
 :root{
-  --navy:#0A2342;
+  --navy:#10221a;
   --navy-2:#173B67;
+  --accent:#BFECC8; /* light green accent */
   --gold:#C99A2E;
-  --bg:#F4F5F7;
+  --bg:#FFFFFF; /* primary white tone */
   --white:#FFFFFF;
   --text:#18202A;
   --muted:#657080;
-  --line:rgba(10,35,66,0.08);
+  --line:rgba(16,34,26,0.06);
   --radius-xl:28px;
 }
 
@@ -35,7 +36,7 @@ img{display:block;max-width:100%;height:auto}
 .actions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
 .btn{height:54px;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;text-decoration:none}
 .btn svg{width:20px;height:20px}
-.btn-call{background:var(--navy);color:var(--white);border:0}
+.btn-call{background:var(--accent);color:var(--navy);border:0}
 .btn-light{background:var(--white);border:1px solid var(--line);color:var(--text)}
 
 /* Address compact panel */
