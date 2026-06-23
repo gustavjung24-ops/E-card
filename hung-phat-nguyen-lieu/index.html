@@ -8,10 +8,10 @@
   <meta name="robots" content="noarchive">
   <style>
     :root{--navy:#10221a;--navy-2:#173B67;--accent:#BFECC8;--gold:#C99A2E;--bg:#FFFFFF;--white:#FFFFFF;--text:#18202A;--muted:#657080}
-    html,body{background:var(--bg);margin:0;height:100%;}
-    .page{display:flex;align-items:center;justify-content:center;padding:12px 8px;min-height:100vh;min-height:-webkit-fill-available;overflow:hidden}
-    .card{width:100%;max-width:410px;background:transparent;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;height:100%;max-height:calc(100vh - 24px)}
-    .hero{width:100%;height:190px;display:block;object-fit:cover;object-position:50% 18%}
+    html,body{background:var(--bg);margin:0;min-height:100%;}
+    .page{display:flex;align-items:center;justify-content:center;padding:12px 8px;min-height:100vh;min-height:-webkit-fill-available}
+    .card{width:100%;max-width:410px;background:transparent;border-radius:16px;overflow:visible;display:flex;flex-direction:column}
+    .hero-bg{width:100%;aspect-ratio:16/6;display:block;background-image:url('assets/images/hero-hung-phat.png');background-size:cover;background-position:50% 18%;border-radius:12px}
     .hero-copy{padding:12px 18px 0;text-align:center}
     .hero-copy p{margin:0;font-size:13px;color:var(--muted);line-height:1.5;letter-spacing:.02em}
     .sheet{background:var(--white);border-radius:28px;margin-top:-20px;padding:16px 16px 14px;box-sizing:border-box;display:flex;flex-direction:column;flex:1;justify-content:space-between;overflow:hidden}
@@ -38,9 +38,9 @@
     .small-btn{height:44px;display:flex;align-items:center;justify-content:center;padding:0 10px;border-radius:14px;background:var(--white);border:1px solid rgba(10,35,66,0.12);color:var(--navy);text-decoration:none;box-shadow:0 8px 20px rgba(10,35,66,0.06);font-weight:700}
     .small-btn:hover{transform:translateY(-1px)}
     .disabled{opacity:0.45;pointer-events:none}
-    html,body,.page,.card{max-width:100%;overflow-x:hidden;overflow-y:hidden}
+    html,body,.page,.card{max-width:100%;overflow-x:hidden}
     @media(max-width:420px){
-      .hero{height:170px;object-position:50% 22%}
+      .hero-bg{background-position:50% 22%}
       .sheet{padding:14px 14px 12px}
       .actions{gap:8px;margin:14px 0}
       .btn{height:46px;font-size:12px}
@@ -55,7 +55,7 @@
 <body>
   <div class="page">
     <main class="card" role="main">
-      <img class="hero" src="assets/images/hero-hung-phat.png" alt="Hung Phat"/>
+      <div class="hero-bg" role="img" aria-label="Công Ty TNHH TM Hưng Phát"></div>
       <div class="hero-copy">
         <p>Nguyên liệu trà sữa · Mì cay · Thực phẩm đông lạnh</p>
       </div>
