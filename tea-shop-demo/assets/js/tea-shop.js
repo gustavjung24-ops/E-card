@@ -68,7 +68,8 @@ if(locationBtn){
   navigator.geolocation.getCurrentPosition(pos=>{
     const lat=pos.coords.latitude.toFixed(6);
     const lng=pos.coords.longitude.toFixed(6);
-    $('#customerAddress').value=`Vị trí hiện tại: ${lat}, ${lng}`;
+    const mapUrl=`https://maps.google.com/?q=${lat},${lng}`;
+    $('#customerAddress').value=`Vị trí hiện tại: ${mapUrl}`;
     if(status) status.textContent='Đã lấy vị trí thành công.';
   },()=>{
     if(status) status.textContent='Không lấy được vị trí. Hãy cho phép quyền định vị.';
