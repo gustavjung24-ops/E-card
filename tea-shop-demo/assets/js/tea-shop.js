@@ -43,6 +43,15 @@ $('#openCart').onclick=()=>{$('#cartList').innerHTML=cart.map(x=>`<div>${x.name}
 $('#continueShopping').onclick=()=>document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'));
 const save=$('#saveContact');if(save)save.onclick=()=>{const a=document.createElement('a');a.href='data:text/vcard,FN:Tea More';a.download='tea-more.vcf';a.click()};
 
+const sendOrder=$('#sendOrder');
+if(sendOrder){sendOrder.onclick=async()=>{
+ const status=$('#checkoutStatus');
+ if(!cart.length){if(status){status.textContent='Chưa có món trong giỏ.';status.classList.add('show')}return}
+ const text=`Tea More - Đơn đặt hàng\nKhách: ${$('#customerName').value||'Chưa nhập'}\nSĐT: ${$('#customerPhone').value||'Chưa nhập'}\nĐịa chỉ: ${$('#customerAddress').value||'Chưa nhập'}\n\n${cart.map(x=>`- ${x.name} x${x.qty}: ${money(x.price*x.qty)}`).join('\n')}\n\nTổng: ${money(cart.reduce((a,x)=>a+x.price*x.qty,0))}`;
+ try{await navigator.clipboard.writeText(text)}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+ if(status){status.textContent='Đã copy đơn. Đang mở Zalo...';status.classList.add('show')}
+ window.open('https://zalo.me/0907489278','_blank');
+}}
 // Checkout location
 const locationBtn = $('#useLocation');
 if(locationBtn){
