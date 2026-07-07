@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Tea More - Đặt trà online",
+  "short_name": "Tea More",
+  "description": "Menu trà sữa và đặt hàng Tea More",
+  "lang": "vi",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff8f1",
+  "theme_color": "#693d27",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

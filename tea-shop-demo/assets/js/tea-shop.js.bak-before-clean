@@ -1,0 +1,51 @@
+(() => {
+const shop={name:'Tea More',zaloUrl:'https://zalo.me/'};
+const img='assets/images/menu/';
+const t={
+ best:'Tr\u00e0 s\u1eefa b\u00e1n ch\u1ea1y',
+ fruit:'Tr\u00e0 tr\u00e1i c\u00e2y',
+ traditional:'Tr\u00e0 s\u1eefa truy\u1ec1n th\u1ed1ng',
+ cheese:'Kem cheese & \u0111\u1eb7c bi\u1ec7t',
+ combo:'Combo & \u01b0u \u0111\u00e3i',
+ swipe:'Vu\u1ed1t \u0111\u1ec3 xem m\u00f3n'
+};
+function decodeText(s){return s.replace(/\\\\u([0-9a-fA-F]{4})/g,(m,c)=>String.fromCharCode(parseInt(c,16)));}
+const groups=[
+{name:t.best,items:[['a','Tr\u00e0 s\u1eefa truy\u1ec1n th\u1ed1ng',35000,'tra-sua-truyen-thong.jpg'],['b','Tr\u00e0 s\u1eefa tr\u00e2n ch\u00e2u \u0111\u01b0\u1eddng \u0111en',45000,'tra-sua-tran-chau-duong-den.jpg'],['c','Tr\u00e0 s\u1eefa d\u00e2u',45000,'tra-sua-dau.jpg'],['d','Tr\u00e0 s\u1eefa matcha',47000,'tra-sua-matcha.jpg'],['e','Tr\u00e0 s\u1eefa socola',47000,'tra-sua-socola.jpg'],['f','Tr\u00e0 s\u1eefa Oreo kem cheese',49000,'tra-sua-oreo-kem-cheese.jpg'],['g','Tr\u00e0 s\u1eefa khoai m\u00f4n',46000,'tra-sua-khoai-mon.jpg'],['h','H\u1ed3ng tr\u00e0 s\u1eefa macchiato',48000,'hong-tra-sua-macchiato.jpg'],['i','Tr\u00e0 s\u1eefa \u00f4 long n\u01b0\u1edbng',49000,'tra-sua-o-long-nuong.jpg'],['j','Tr\u00e0 s\u1eefa pudding tr\u1ee9ng',46000,'tra-sua-pudding-trung.jpg']]},
+{name:t.fruit,items:[['d','Tr\\u00e0 \u0111\\u00e0o cam s\\u1ea3',49000,'tra-dao-cam-sa.jpg'],['e','Tr\\u00e0 v\\u1ea3i hoa h\\u1ed3ng',47000,'tra-vai-hoa-hong.jpg'],['f','Tr\\u00e0 xo\\u00e0i nhi\\u1ec7t \u0111\\u1edbi',49000,'tra-xoai-nhiet-doi.jpg'],['g','Tr\\u00e0 chanh d\\u00e2y m\\u1eadt ong',45000,'tra-chanh-day-mat-ong.jpg'],['h','Tr\\u00e0 d\\u00e2u t\\u01b0\\u01a1i',48000,'tra-dau-tuoi.jpg'],['i','Tr\\u00e0 t\\u00e1o xanh',46000,'tra-tao-xanh.jpg'],['j','Tr\\u00e0 d\\u1ee9a nha \u0111am',47000,'tra-dua-nha-dam.jpg'],['k','Tr\\u00e0 cam nhi\\u1ec7t \u0111\\u1edbi',47000,'tra-cam-nhiet-doi.jpg'],['l','Tr\\u00e0 l\\u1ef1u berry',49000,'tra-luu-berry.jpg'],['m','Tr\\u00e0 v\\u1ea3i chanh',46000,'tra-vai-chanh.jpg']]},
+{name:t.traditional,items:[['g','H\u1ed3ng tr\u00e0 s\u1eefa',39000,'tra-sua-truyen-thong.jpg'],['h','Tr\u00e0 s\u1eefa th\u00e1i',42000,'tra-sua-dau.jpg'],['i','Tr\u00e0 s\u1eefa classic',40000,'tra-sua-truyen-thong.jpg']]},
+{name:t.cheese,items:[['j','Socola kem cheese',49000,'socola-kem-cheese.jpg'],['k','D\u00e2u kem cheese',52000,'tra-sua-dau.jpg']]},
+{name:t.combo,items:[['l','Combo 2 ly',80000,'hero-tea-more.jpg'],['m','Combo nh\u00f3m',150000,'hero-tea-more.jpg']]}
+].map(g=>({...g,items:g.items.map(x=>({id:x[0],name:decodeText(x[1]),price:x[2],image:img+x[3],note:'V\u1ecb tr\u00e0 s\u1eefa th\u01a1m ngon.',ingredients:'Tr\u00e0, s\u1eefa, topping v\u00e0 \u0111\u00e1.'}))}));
+const $=s=>document.querySelector(s);
+const money=n=>n.toLocaleString('vi-VN')+'\u0111';
+let cart=[];
+let current=null;let productQty=1;
+function renderMenu(){
+ $('#menuSections').innerHTML=groups.map((g,gi)=>`<section class="menu-group"><div class="menu-group-head"><div><h2>${g.name}</h2><p>${t.swipe}</p></div><span>${g.items.length} m\u00f3n</span></div><div class="carousel">${g.items.map((p)=>`<article class="product"><div class="product-image"><img src="${p.image}" alt="${p.name}"></div><div class="product-body"><div class="product-name">${p.name}</div><div class="product-meta"><span class="product-price">${money(p.price)}</span></div><button class="button select-product" data-id="${p.id}">Ch\u1ecdn m\u00f3n</button></div></article>`).join('')}</div></section>`).join('');
+ $('#menuSections').querySelectorAll('.select-product').forEach(b=>b.onclick=()=>openProduct(find(b.dataset.id)));
+}
+function find(id){return groups.flatMap(g=>g.items).find(x=>x.id===id)}
+const sizes=[{name:'M',extra:0},{name:'L',extra:8000}];
+const toppings=[{name:'TrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢n chÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢u ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“en',extra:7000},{name:'Kem cheese',extra:12000},{name:'ThÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ch trÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡i cÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢y',extra:8000}];
+function renderOptions(){
+$('#sizeChoices').innerHTML=sizes.map((x,i)=>`<button class="choice ${i===0?'active':''}" data-size="${x.name}">${x.name}${x.extra?' +'+money(x.extra):''}</button>`).join('');
+$('#toppingChoices').innerHTML=toppings.map(x=>`<button class="choice" data-topping="${x.name}">${x.name} +${money(x.extra)}</button>`).join('');
+}
+document.addEventListener('click',e=>{if(e.target.id==='productQuantityMinus'){productQty=Math.max(1,productQty-1);document.querySelector('#productQuantityValue').textContent=productQty;}if(e.target.id==='productQuantityPlus'){productQty++;document.querySelector('#productQuantityValue').textContent=productQty;}});
+function openProduct(p){current=p;productQty=1;$('#modalProductImage').src=p.image;$('#modalProductName').textContent=p.name;$('#modalProductPrice').textContent=money(p.price);$('#modalProductNote').textContent=p.note;$('#productIngredients').innerHTML=p.ingredients.split(',').map(x=>'<span class="ingredient-chip">'+x+'</span>').join('');$('#productQuantityValue').textContent=productQty;$('#productModal').classList.add('open');}
+function closeAll(){document.querySelectorAll('.modal').forEach(x=>x.classList.remove('open'))}
+document.querySelectorAll('[data-close-modal]').forEach(b=>b.onclick=closeAll);
+$('#addToCart').onclick=()=>{if(!current)return;cart.push({...current,qty:productQty});updateCart();closeAll();};
+function updateCart(){const n=cart.reduce((a,b)=>a+b.qty,0);const btn=$('#openCart');if(btn){btn.textContent='Gi\u1ecf h\u00e0ng';if(n){const badge=document.createElement('i');badge.className='cart-count';badge.textContent=n;btn.appendChild(badge);}}}
+$('#openCart').onclick=()=>{ $('#cartList').innerHTML=cart.map(x=>`<div>${x.name} x${x.qty} - ${money(x.price*x.qty)}</div>`).join('')||'<div>Gi\u1ecf h\u00e0ng tr\u1ed1ng</div>';$('#cartTotal').textContent=money(cart.reduce((a,b)=>a+b.price*b.qty,0));$('#cartModal').classList.add('open')};
+$('#continueShopping').onclick=closeAll;
+$('#openCheckout').onclick=()=>{$('#checkoutModal').classList.add('open');};
+const save=document.querySelector('#saveContact');
+if(save){save.onclick=()=>{const v='BEGIN:VCARD\\nVERSION:3.0\\nFN:Tea More\\nORG:Tea More\\nTEL:0900000000\\nEND:VCARD';const blob=new Blob([v],{type:'text/vcard'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tea-more.vcf';a.click();};}
+const zalo=document.querySelector('.zalo-action');
+if(zalo){zalo.onclick=()=>window.open(shop.zaloUrl,'_blank');}
+const openThemes=document.querySelector('#openThemes');if(openThemes){openThemes.onclick=()=>document.querySelector('#themeModal').classList.add('open');}
+const themeNames=['fresh','velvet','gold','matcha','berry','cocoa'];document.querySelectorAll('.theme-btn').forEach(b=>b.onclick=()=>{themeNames.forEach(x=>document.body.classList.remove('theme-'+x));document.body.classList.add('theme-'+b.dataset.theme);document.querySelectorAll('.theme-btn').forEach(x=>x.classList.toggle('active',x===b));});
+let deferredInstall=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;});const install=document.querySelector('#installApp');if(install){install.onclick=async()=>{if(deferredInstall){deferredInstall.prompt();deferredInstall=null;}};}if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}renderMenu();updateCart();
+})();

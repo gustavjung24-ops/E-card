@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f1">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <title>Tea More | Menu &amp; &#273;&#7863;t h&#224;ng</title>
+  <style>
+    :root{--ink:#302018;--muted:#81695b;--paper:#fffdf9;--cream:#fff8f1;--line:#f0dfd0;--brown:#693d27;--orange:#e97927;--green:#23734b;--green-dark:#175939;--soft:#fff3e8;--shadow:0 14px 32px rgba(82,45,24,.11)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top,#fffefa 0,#fff6ea 48%,#f6eadc 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body.modal-open{overflow:hidden}.page{width:min(100%,460px);margin:0 auto;padding:14px 14px calc(96px + env(safe-area-inset-bottom))}.hero{position:relative;min-height:244px;border-radius:28px;overflow:hidden;background:#d8a47a;box-shadow:0 22px 50px rgba(91,46,25,.20)}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(55,25,12,.02) 28%,rgba(55,25,12,.65) 100%)}.hero-badge{position:absolute;z-index:1;top:14px;right:14px;border:1px solid rgba(255,255,255,.38);border-radius:999px;background:rgba(68,34,19,.42);backdrop-filter:blur(10px);color:#fff;padding:8px 11px;font-size:10px;font-weight:850;letter-spacing:.06em;text-transform:uppercase}.hero-bottom{position:absolute;z-index:1;left:18px;right:18px;bottom:17px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;color:#fff}.hero-bottom strong{display:block;font-size:22px;letter-spacing:-.04em}.hero-bottom span{display:block;margin-top:4px;font-size:12px;line-height:1.35;opacity:.94}.hero-dot{flex:0 0 auto;width:9px;height:9px;border-radius:50%;margin-bottom:7px;background:#baf0c2;box-shadow:0 0 0 5px rgba(186,240,194,.14)}.intro{display:flex;gap:11px;align-items:flex-start;margin:18px 4px 0}.intro-icon{display:grid;place-items:center;flex:0 0 39px;width:39px;height:39px;border:1px solid var(--line);border-radius:13px;background:#fff;color:var(--brown);box-shadow:0 7px 16px rgba(90,49,24,.08);font-size:17px}.intro h1{margin:0;font-size:18px;line-height:1.25;letter-spacing:-.025em}.intro p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.45}.shop-profile{display:flex;gap:12px;align-items:center;margin:18px 4px 0;padding:12px;border:1px solid #f0dfd0;border-radius:20px;background:rgba(255,253,249,.8)}.shop-logo{width:58px;height:58px;border-radius:16px;object-fit:cover;background:#fff;flex:none}.shop-profile h2{margin:0;font-size:17px;letter-spacing:-.03em}.shop-profile p{margin:5px 0;color:#81695b;font-size:12px;line-height:1.45}.save-contact{margin-top:7px;padding:7px 10px;border:1px solid #dfc9b8;border-radius:99px;background:#fff;color:#693d27;font-size:11px}.menu-groups{margin-top:27px}.menu-group{margin-top:27px}.menu-group:first-child{margin-top:0}.menu-group-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 4px 10px}.menu-group-head h2{margin:0;font-size:20px;line-height:1.2;letter-spacing:-.035em}.menu-group-head p{margin:4px 0 0;color:var(--muted);font-size:11px;line-height:1.35}.menu-group-head span{flex:0 0 auto;color:var(--muted);font-size:11px;white-space:nowrap}.carousel{display:flex;gap:12px;overflow-x:auto;padding:3px 3px 12px;scroll-snap-type:x mandatory;scrollbar-width:none}.carousel::-webkit-scrollbar{display:none}.product{scroll-snap-align:start;position:relative;flex:0 0 190px;overflow:hidden;border:1px solid rgba(107,59,37,.09);border-radius:21px;background:var(--paper);box-shadow:0 11px 22px rgba(86,46,21,.09)}.product-image{position:relative;height:139px;background:#eed4b7;overflow:hidden}.product-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s ease}.product:hover img{transform:scale(1.045)}.ribbon{position:absolute;top:9px;left:9px;border-radius:999px;background:#fff;color:var(--brown);padding:6px 8px;font-size:9px;font-weight:850;letter-spacing:.03em;box-shadow:0 5px 12px rgba(53,32,24,.16)}.product-body{padding:11px}.product-name{min-height:37px;font-size:14px;line-height:1.28;font-weight:830}.product-meta{display:flex;align-items:center;justify-content:space-between;gap:7px;margin:7px 0 10px}.product-price{font-size:14px;font-weight:860;color:var(--orange)}.product-note{max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:10px}.button{border:0;cursor:pointer;font:inherit;font-weight:820;transition:transform .18s ease,filter .18s ease}.button:hover{transform:translateY(-1px);filter:brightness(1.035)}.select-product{width:100%;padding:10px;border-radius:12px;background:var(--brown);color:#fff;font-size:12px}.info-strip{display:flex;gap:11px;align-items:center;margin:29px 0 0;border:1px solid #f1dfcf;border-radius:17px;background:linear-gradient(135deg,#fffdf9,#f9eddf);padding:12px 13px;color:var(--muted);font-size:12px;line-height:1.4}.info-strip b{display:block;margin-bottom:2px;color:var(--ink);font-size:13px}.info-icon{display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;border-radius:10px;background:#fff;color:var(--orange);border:1px solid var(--line)}.bottom-cta{position:fixed;z-index:10;left:50%;bottom:max(12px,env(safe-area-inset-bottom));width:min(calc(100% - 24px),436px);transform:translateX(-50%);padding:8px;border:1px solid rgba(240,224,209,.95);border-radius:18px;background:rgba(255,253,249,.92);backdrop-filter:blur(13px);box-shadow:0 13px 30px rgba(78,40,21,.16)}.bottom-cta button{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:49px;padding:12px;border-radius:12px;background:var(--green);color:#fff}.bottom-cta button:disabled{background:#ad9d91;cursor:not-allowed;transform:none;filter:none}.cart-count{display:grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:99px;background:#fff;color:var(--green-dark);font-size:11px}.modal{position:fixed;z-index:30;inset:0;display:none;align-items:flex-end;background:rgba(38,23,16,.55);padding:0}.modal.open{display:flex}.sheet{width:min(100%,520px);max-height:92vh;overflow:auto;margin:0 auto;background:var(--paper);border-radius:28px 28px 0 0;padding:15px 16px calc(22px + env(safe-area-inset-bottom));box-shadow:0 -16px 46px rgba(38,23,16,.22)}.sheet-handle{width:42px;height:5px;margin:0 auto 13px;border-radius:99px;background:#e6d4c5}.sheet-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.sheet-top h2{margin:0;font-size:20px;letter-spacing:-.035em}.sheet-top p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.35}.close{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--brown);font-size:22px;line-height:1;cursor:pointer}.product-preview{display:grid;grid-template-columns:118px 1fr;gap:13px;align-items:center;margin:16px 0 3px;padding:10px;border:1px solid #f0dfd0;border-radius:18px;background:linear-gradient(135deg,#fff,#fbefe4)}.product-preview img{display:block;width:118px;height:118px;border-radius:14px;object-fit:cover}.product-preview b{display:block;font-size:17px;line-height:1.25;letter-spacing:-.025em}.product-preview span{display:block;margin-top:5px;color:var(--orange);font-size:15px;font-weight:850}.product-preview small{display:block;margin-top:5px;color:var(--muted);font-size:12px;line-height:1.35}.form-label{display:block;margin:16px 0 7px;font-size:13px;font-weight:780}.choice-row{display:flex;gap:8px;flex-wrap:wrap}.choice{border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px 12px;color:var(--ink);font:inherit;font-size:13px;cursor:pointer}.choice.active{border-color:var(--brown);background:#fff4eb;color:var(--brown);font-weight:830;box-shadow:0 0 0 2px rgba(99,57,35,.07)}.quantity{display:inline-flex;align-items:center;gap:12px;padding:6px;border-radius:13px;background:#fff;border:1px solid var(--line)}.quantity button,.line-quantity button{display:grid;place-items:center;width:31px;height:31px;border:0;border-radius:9px;background:#f8ede3;color:var(--brown);font-size:18px;cursor:pointer}.add-cart{width:100%;margin-top:18px;padding:15px;border-radius:14px;background:var(--green);color:#fff}.sheet-status{display:none;margin:10px 2px 0;color:var(--green);font-size:12px;font-weight:760;line-height:1.4}.sheet-status.show{display:block}.cart-list{display:grid;gap:10px;margin:16px 0}.cart-empty{padding:27px 14px;border:1px dashed #dec8b7;border-radius:17px;background:#fffaf5;color:var(--muted);text-align:center;font-size:13px;line-height:1.5}.cart-empty b{display:block;margin-bottom:4px;color:var(--ink);font-size:15px}.cart-item{display:grid;grid-template-columns:67px 1fr auto;gap:10px;align-items:center;border:1px solid #f0dfd0;border-radius:16px;background:#fff;padding:9px}.cart-item img{width:67px;height:67px;border-radius:12px;object-fit:cover}.cart-name{font-size:14px;font-weight:820;line-height:1.28}.cart-options{margin-top:3px;color:var(--muted);font-size:11px;line-height:1.35}.cart-price{margin-top:5px;color:var(--orange);font-size:13px;font-weight:850}.cart-actions{display:flex;flex-direction:column;align-items:end;gap:7px}.line-quantity{display:flex;align-items:center;gap:6px}.line-quantity button{width:26px;height:26px;font-size:16px}.line-quantity span{min-width:14px;text-align:center;font-size:13px;font-weight:800}.remove-item{border:0;background:transparent;color:#ab6d58;font:inherit;font-size:11px;cursor:pointer;text-decoration:underline}.cart-total{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px dashed #e4cfbe;padding:14px 2px 4px}.cart-total span{color:var(--muted);font-size:13px}.cart-total strong{font-size:18px;color:var(--brown)}.checkout-button{width:100%;margin-top:14px;padding:15px;border-radius:14px;background:var(--green);color:#fff}.continue-button{width:100%;margin-top:9px;padding:12px;border:1px solid var(--line);border-radius:13px;background:#fff;color:var(--brown)}.field{width:100%;border:1px solid var(--line);outline:none;border-radius:13px;background:#fff;padding:13px 14px;color:var(--ink);font:inherit;font-size:14px}.field:focus{border-color:#b88a70;box-shadow:0 0 0 3px rgba(184,138,112,.13)}textarea.field{min-height:78px;resize:vertical}.location-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:8px;padding:11px;border:1px dashed #c79e7f;border-radius:13px;background:#fffaf5;color:var(--brown);font:inherit;font-size:13px;font-weight:790;cursor:pointer}.checkout-summary{margin:16px 0 12px;padding:12px;border-radius:14px;background:#fff6ee;color:#66412c;font-size:12px;line-height:1.52}.checkout-summary b{font-size:13px}.summary-line{display:flex;justify-content:space-between;gap:12px;margin-top:6px}.send-order{width:100%;padding:15px;border-radius:14px;background:var(--green);color:#fff}.tiny{margin:8px 2px 0;color:#967d6e;font-size:11px;line-height:1.4}@media(max-width:360px){.page{padding:10px 10px calc(96px + env(safe-area-inset-bottom))}.hero{min-height:225px;border-radius:24px}.product{flex-basis:181px}.product-image{height:132px}.product-preview{grid-template-columns:96px 1fr}.product-preview img{width:96px;height:96px}}
+  /* Tea More visual polish: connected menu layout */
+.shop-profile{border:0;border-radius:0;background:transparent;margin:14px 4px 4px;padding:8px 0;border-bottom:1px solid #ecd9c8}
+.shop-logo{width:54px;height:54px;border-radius:50%;box-shadow:0 8px 18px rgba(80,45,20,.10)}
+.save-contact{background:#fff8f1}
+.menu-group{padding-top:8px;border-top:1px solid rgba(225,202,180,.65)}
+.menu-group:first-child{border-top:0}
+.menu-group-head{margin-bottom:8px}
+.carousel{background:rgba(255,253,249,.35);padding:5px 2px 14px;gap:16px}
+.product{border:0;border-radius:0;background:transparent;box-shadow:none;flex-basis:170px}
+.product-image{height:170px;border-radius:20px;box-shadow:0 8px 20px rgba(80,45,20,.12)}
+.product-body{padding:10px 2px 0}
+.product-name{min-height:0;font-size:15px}
+.select-product{border-radius:999px;padding:9px;background:#693d27}
+.bottom-cta{border-radius:22px}.shop-profile{display:grid;grid-template-columns:54px minmax(0,1fr) auto;align-items:center;gap:12px;border:0;border-bottom:1px solid #ecd9c8;border-radius:0;background:transparent;margin:14px 4px 4px;padding:8px 0}
+.shop-logo{width:54px;height:54px;border-radius:50%;object-fit:cover}
+.shop-copy h2{margin:0 0 3px;font-size:17px;line-height:1.15}
+.shop-copy p{margin:0;color:#81695b;font-size:12px;line-height:1.45}.shop-map{color:#693d27;text-decoration:none;font-weight:750}
+.save-contact{margin:0;padding:9px 12px;border:0;border-radius:999px;background:#693d27;color:#fff;font-size:11px;font-weight:800;white-space:nowrap;box-shadow:0 8px 18px rgba(80,45,20,.15)}.glass-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:8px;border-radius:24px;background:rgba(255,253,249,.72);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(18px);box-shadow:0 12px 32px rgba(80,45,20,.16)}
+.quick-action{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;min-height:48px;border:0;border-radius:17px;background:rgba(255,255,255,.6);color:#693d27;text-decoration:none;font-size:18px;font-weight:850}
+.quick-action span{font-size:10px;font-weight:750}
+.cart-action{background:#693d27;color:#fff}
+.zalo-action{background:rgba(35,115,75,.12);color:#176b48}.glass-actions{grid-template-columns:1fr 1fr;width:min(calc(100% - 28px),420px);padding:7px;border-radius:28px;background:rgba(255,253,249,.68);backdrop-filter:blur(22px)}
+.quick-action{min-height:52px;border-radius:20px}
+.cart-action{font-size:17px}.glass-actions{display:grid;grid-template-columns:1.45fr 1fr;gap:10px;width:min(calc(100% - 32px),410px);padding:7px;border:1px solid rgba(255,255,255,.65);border-radius:26px;background:rgba(255,248,241,.58);backdrop-filter:blur(24px);box-shadow:0 10px 35px rgba(65,37,24,.12)}
+.quick-action{height:56px;border:0;border-radius:19px;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.58);color:#693d27;text-decoration:none;font-size:13px;font-weight:800}
+.quick-action span:last-child{font-size:13px}
+.dock-icon{font-size:18px!important;line-height:1}
+.cart-action{background:#693d27;color:#fff;box-shadow:0 8px 18px rgba(105,61,39,.22)}
+.zalo-action{background:rgba(255,255,255,.72);color:#2373a8}
+.zalo-mark{font-size:20px!important;font-weight:900;line-height:1}/* Global button depth system */
+.button,.save-contact,.select-product,.choice,.quantity button,.line-quantity button,.location-button,.checkout-button,.continue-button,.send-order,.close,.floating-cart,.floating-zalo{position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.button:before,.save-contact:before,.select-product:before,.checkout-button:before,.send-order:before,.floating-cart:before,.floating-zalo:before{content:"";position:absolute;left:10%;right:10%;top:0;height:45%;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.24),transparent);pointer-events:none}
+.button:hover,.save-contact:hover,.select-product:hover,.checkout-button:hover,.send-order:hover,.floating-cart:hover,.floating-zalo:hover{transform:translateY(-2px);filter:brightness(1.03)}
+.button:active,.save-contact:active,.select-product:active,.checkout-button:active,.send-order:active,.floating-cart:active,.floating-zalo:active{transform:translateY(1px);box-shadow:none}
+.select-product{box-shadow:0 7px 16px rgba(105,61,39,.25),inset 0 -2px 0 rgba(0,0,0,.12)}
+.save-contact{box-shadow:0 8px 18px rgba(105,61,39,.22),inset 0 -2px 0 rgba(0,0,0,.12)}
+.choice{box-shadow:0 5px 12px rgba(80,45,20,.08)}
+.choice.active{box-shadow:0 8px 18px rgba(105,61,39,.18),inset 0 -2px 0 rgba(0,0,0,.08)}
+.add-cart,.checkout-button,.send-order{box-shadow:0 12px 26px rgba(35,115,75,.28),inset 0 -3px 0 rgba(0,0,0,.12)}
+.quantity button,.line-quantity button{box-shadow:0 4px 10px rgba(80,45,20,.12),inset 0 -2px 0 rgba(0,0,0,.08)}
+.close{box-shadow:0 5px 12px rgba(80,45,20,.12)}.install-app{cursor:pointer;font:inherit}.shop-profile{position:relative}
+.app-chip{grid-column:1 / -1;justify-self:center;margin-top:2px;padding:7px 18px;border:0;border-radius:999px;color:#fff;font-size:11px;font-weight:850;background:linear-gradient(90deg,#693d27,#d98a45,#693d27);background-size:200% 100%;animation:appGradient 3s linear infinite;box-shadow:0 8px 18px rgba(105,61,39,.2)}
+@keyframes appGradient{0%{background-position:0 0}100%{background-position:200% 0}}.profile-actions{display:flex;align-items:center;gap:7px}
+.app-chip{display:grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid rgba(255,255,255,.45);border-radius:50%;color:#fff;font-size:14px;font-weight:900;background:linear-gradient(135deg,#693d27,#d98a45,#693d27);background-size:200% 200%;animation:appGradient 3s ease infinite;box-shadow:0 8px 18px rgba(105,61,39,.24)}.theme-demo{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:28px 4px 12px;padding:12px;border-radius:22px;background:rgba(255,253,249,.6);border:1px solid #f0dfd0}
+.theme-demo p{width:100%;margin:0 0 2px;text-align:center;color:#81695b;font-size:12px;font-weight:700}
+.theme-btn{border:1px solid #ead6c5;border-radius:999px;padding:8px 14px;background:#fff;color:#693d27;font-size:11px;font-weight:800;box-shadow:0 5px 12px rgba(80,45,20,.08)}
+.theme-btn.active{background:#693d27;color:#fff}
+body.theme-fresh{background:linear-gradient(180deg,#f8fff7,#fff8f1)}
+body.theme-fresh .select-product,body.theme-fresh .save-contact{background:#28704c}
+body.theme-fresh .product-price{color:#28704c}
+body.theme-fresh .hero:after{background:linear-gradient(180deg,rgba(25,80,40,.05),rgba(25,80,40,.55))}
+body.theme-velvet .select-product,body.theme-velvet .save-contact{background:#693d27}body.theme-gold{background:linear-gradient(180deg,#fff9e9,#fff7ee);font-family:Georgia,serif}
+body.theme-gold .hero:after{background:linear-gradient(180deg,rgba(80,50,10,.05),rgba(90,55,15,.65))}
+body.theme-gold .product{background:#fffdf7;border-radius:24px}
+body.theme-gold .select-product,body.theme-gold .save-contact{background:#a97822}
+body.theme-matcha{background:linear-gradient(180deg,#f5fff5,#fff9ef)}
+body.theme-matcha .hero:after{background:linear-gradient(180deg,rgba(30,90,50,.05),rgba(20,90,45,.6))}
+body.theme-matcha .product-image{border-radius:32px}
+body.theme-matcha .select-product,body.theme-matcha .save-contact{background:#285f45;border-radius:16px}
+body.theme-berry{background:linear-gradient(180deg,#fff5f7,#fffaf2)}
+body.theme-berry .product{border-radius:30px}
+body.theme-berry .product-image{border-radius:30px 30px 10px 10px}
+body.theme-berry .select-product,body.theme-berry .save-contact{background:#c05a75;border-radius:999px}
+body.theme-cocoa{background:linear-gradient(180deg,#f4ece4,#fff8f1);color:#281810}
+body.theme-cocoa .hero:after{background:linear-gradient(180deg,rgba(20,10,5,.1),rgba(25,12,5,.8))}
+body.theme-cocoa .select-product,body.theme-cocoa .save-contact{background:#3b2418}.theme-demo{background:transparent;border:0;padding:4px;margin-top:22px}
+.theme-open{display:block;margin:auto;border:1px solid #e8d3c0;border-radius:999px;padding:10px 20px;background:#fff;color:#693d27;font-size:12px;font-weight:850;box-shadow:0 8px 18px rgba(80,45,20,.12)}
+.theme-options{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.glass-actions{grid-template-columns:.55fr 1fr .8fr;gap:7px;padding:6px;border-radius:24px}
+.quick-action{height:48px;min-height:48px;border-radius:16px;font-size:12px}
+.theme-bottom{background:#fff!important;color:#693d27!important}
+.cart-action{font-weight:900}/* Product card stability */
+.product{display:flex;flex-direction:column;height:330px;}
+.product-body{display:flex;flex:1;flex-direction:column;padding:10px 12px 12px}
+.product-name{height:42px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35;font-size:14px}
+.product-meta{margin-top:auto;margin-bottom:10px;min-height:22px}
+.select-product{margin-top:0;height:38px;display:flex;align-items:center;justify-content:center}</style>
+<style id="pwa-mobile-lock">html,body{max-width:100%;overflow-x:hidden;overscroll-behavior-x:none;-webkit-tap-highlight-color:transparent}body{min-height:100dvh;-webkit-user-select:none;user-select:none}input,textarea{user-select:text;-webkit-user-select:text}</style><style id="pwa-install-ui">#installApp[hidden]{display:none!important}#installApp:not([hidden]){width:auto;height:34px;padding:0 12px;border-radius:999px}</style></head>
+<body>
+  <main class="page">
+    <section class="hero" aria-label="Tea More menu demo">
+      <img src="assets/images/menu/hero-tea-more.jpg" alt="Tea More - b&#7897; s&#432;u t&#7853;p tr&#224; s&#7919;a premium">
+      
+      <div class="hero-bottom"><div><strong>Tea More</strong><span>Ch&#7885;n m&#243;n &middot; th&#234;m gi&#7887; &middot; g&#7917;i Zalo</span></div><span class="hero-dot" aria-hidden="true"></span></div>
+    </section>
+
+    <section class="shop-profile" aria-label="Th&#244;ng tin qu&#225;n"><img class="shop-logo" src="assets/images/menu/logo.png" alt="Tea More"><div class="shop-copy"><h2>Tea More</h2><p><a class="shop-map" href="https://maps.google.com/?q=Tea+More+Shop" target="_blank" rel="noopener">&#128205; Xem v&#7883; tr&#237; qu&#225;n</a><br>Giao nhanh - &#273;&#7863;t m&#243;n qua Zalo</p></div><div class="profile-actions"><button class="button save-contact" id="saveContact" type="button">L&#432;u qu&#225;n</button><button class="app-chip install-app" id="installApp" type="button" hidden aria-label="Cài ứng dụng Tea More">Cài app</button></div></section>
+
+    <div class="menu-groups" id="menuSections" aria-label="Kh&#225;m ph&#225; menu"></div><div class="modal" id="themeModal"><div class="sheet"><button data-close-modal class="close">&#215;</button><h2>Ch&#7885;n phong c&#225;ch</h2><div class="theme-options"><button class="theme-btn active" data-theme="velvet">Tea Premium</button><button class="theme-btn" data-theme="fresh">Fresh Garden</button><button class="theme-btn" data-theme="gold">Luxury Gold</button><button class="theme-btn" data-theme="matcha">Matcha Zen</button><button class="theme-btn" data-theme="berry">Berry Cream</button><button class="theme-btn" data-theme="cocoa">Dark Cocoa</button></div></div></div>
+  </main>
+
+  <div class="bottom-cta glass-actions"><button class="quick-action theme-bottom" id="openThemes" type="button">M&#7851;u</button><button class="quick-action cart-action" id="openCart" type="button"><span>Gi&#7887;</span></button><a class="quick-action zalo-action" href="https://zalo.me/0907489278" target="_blank" rel="noopener"><span>Zalo</span></a></div>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="productTitle">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="sheet-top"><div><h2 id="productTitle">Ch&#7885;n m&#243;n</h2><p>Xem th&#244;ng tin m&#243;n tr&#432;&#7899;c khi th&#234;m v&#224;o gi&#7887;.</p></div><button class="close" type="button" data-close-modal aria-label="&#272;&#243;ng">&times;</button></div>
+      <div class="product-preview"><img id="modalProductImage" src="" alt=""><div><b id="modalProductName"></b><span id="modalProductPrice"></span><small id="modalProductNote"></small></div></div>
+      <label class="form-label">Trong ly c&#243; g&#236;?</label><div class="ingredient-list" id="productIngredients"></div>
+      <label class="form-label">S&#7889; l&#432;&#7907;ng</label><div class="quantity"><button type="button" id="productQuantityMinus" aria-label="Gi&#7843;m s&#7889; l&#432;&#7907;ng">&minus;</button><strong id="productQuantityValue">1</strong><button type="button" id="productQuantityPlus" aria-label="T&#259;ng s&#7889; l&#432;&#7907;ng">+</button></div>
+      <button class="button add-cart" id="addToCart" type="button">Th&#234;m v&#224;o gi&#7887;</button>
+      <div class="sheet-status" id="productStatus" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="sheet-top"><div><h2 id="cartTitle">Gi&#7887; h&#224;ng</h2><p id="cartSubtitle">Ch&#432;a c&#243; m&#243;n n&#224;o trong gi&#7887;.</p></div><button class="close" type="button" data-close-modal aria-label="&#272;&#243;ng">&times;</button></div>
+      <div class="cart-list" id="cartList"></div>
+      <div class="cart-total"><span>T&#7893;ng t&#7841;m t&#237;nh</span><strong id="cartTotal">0&#273;</strong></div>
+      <button class="button checkout-button" id="openCheckout" type="button">Ti&#7871;p t&#7909;c &#273;&#7863;t h&#224;ng</button>
+      <button class="button continue-button" id="continueShopping" type="button">Ch&#7885;n th&#234;m m&#243;n</button>
+    </section>
+  </div>
+
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="sheet-top"><div><h2 id="checkoutTitle">Th&#244;ng tin giao h&#224;ng</h2><p>Ki&#7875;m tra &#273;&#417;n, copy n&#7897;i dung r&#7891;i d&#225;n g&#7917;i ch&#7911; qu&#225;n qua Zalo.</p></div><button class="close" type="button" data-close-modal aria-label="&#272;&#243;ng">&times;</button></div>
+      <label class="form-label" for="customerName">T&#234;n kh&#225;ch</label><input class="field" id="customerName" autocomplete="name" placeholder="V&#237; d&#7909;: Minh Anh">
+      <label class="form-label" for="customerPhone">S&#7889; &#273;i&#7879;n tho&#7841;i</label><input class="field" id="customerPhone" inputmode="tel" autocomplete="tel" placeholder="V&#237; d&#7909;: 0909 123 456">
+      <label class="form-label" for="customerAddress">&#7883;a ch&#7881; giao h&#224;ng</label><textarea class="field" id="customerAddress" placeholder="Nh&#7853;p &#273;&#7883;a ch&#7881; ho&#7863;c l&#7845;y v&#7883; tr&#237; hi&#7879;n t&#7841;i"></textarea>
+      <button class="location-button" id="useLocation" type="button">&#8982; L&#7845;y v&#7883; tr&#237; giao h&#224;ng</button>
+      <div class="checkout-summary" id="checkoutSummary"></div>
+      <button class="button send-order" id="sendOrder" type="button">Copy &#273;&#417;n &amp; m&#7903; Zalo</button>
+      <div class="sheet-status" id="checkoutStatus" aria-live="polite"></div>
+      <p class="tiny">Demo: tr&#432;&#7899;c khi d&#249;ng th&#7853;t, thay &#273;&#432;&#7901;ng d&#7851;n Zalo ch&#7911; qu&#225;n trong <code>assets/js/tea-shop.js</code>.</p>
+    </section>
+  </div>
+
+  <script src="assets/js/tea-shop.js"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js"));}</script></body>
+</html>
