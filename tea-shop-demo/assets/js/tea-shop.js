@@ -2,19 +2,17 @@
 const img='assets/images/menu/';
 const groups=[
 ['Trà sữa bán chạy',[['tra-sua-truyen-thong','Trà sữa truyền thống',35000,'tra-sua-truyen-thong.jpg'],['tra-sua-tran-chau','Trà sữa trân châu đường đen',45000,'tra-sua-tran-chau-duong-den.jpg'],['tra-sua-matcha','Trà sữa matcha',47000,'tra-sua-matcha.jpg']]],
-['Trà trái cây',[['tra-dao-cam-sa','Trà đào cam sả',49000,'tra-dao-cam-sa.jpg'],['tra-vai-hoa-hong','Trà vải hoa hồng',47000,'tra-vai-hoa-hong.jpg'],['tra-xoai-nhiet-doi','Trà xoài nhiệt đới',49000,'tra-xoai-nhiet-doi.jpg'],['tra-chanh-day','Trà chanh dây mật ong',45000,'tra-chanh-day-mat-ong.jpg'],['tra-dau-tuoi','Trà dâu tươi',48000,'tra-dau-tuoi.jpg']]],
-['Trà sữa truyền thống',[
-['tra-sua-truyen-thong','Trà sữa truyền thống',35000,'tra-sua-truyen-thong.jpg'],
-['tra-sua-tran-chau-duong-den','Trà sữa trân châu đường đen',45000,'tra-sua-tran-chau-duong-den.jpg'],
-['tra-sua-dau','Trà sữa dâu',45000,'tra-sua-dau.jpg'],
-['tra-sua-matcha','Trà sữa matcha',47000,'tra-sua-matcha.jpg'],
-['tra-sua-socola','Trà sữa socola',47000,'tra-sua-socola.jpg'],
-['tra-sua-oreo-kem-cheese','Trà sữa Oreo kem cheese',49000,'tra-sua-oreo-kem-cheese.jpg'],
-['tra-sua-khoai-mon','Trà sữa khoai môn',46000,'tra-sua-khoai-mon.jpg'],
-['hong-tra-sua-macchiato','Hồng trà sữa macchiato',48000,'hong-tra-sua-macchiato.jpg'],
-['tra-sua-o-long-nuong','Trà sữa ô long nướng',49000,'tra-sua-o-long-nuong.jpg'],
-['tra-sua-pudding-trung','Trà sữa pudding trứng',46000,'tra-sua-pudding-trung.jpg']]],
-['Kem cheese & đặc biệt',[
+['Trà trái cây',[
+['tra-dao-cam-sa','Trà đào cam sả',49000,'tra-dao-cam-sa.jpg'],
+['tra-vai-hoa-hong','Trà vải hoa hồng',47000,'tra-vai-hoa-hong.jpg'],
+['tra-xoai-nhiet-doi','Trà xoài nhiệt đới',49000,'tra-xoai-nhiet-doi.jpg'],
+['tra-chanh-day-mat-ong','Trà chanh dây mật ong',45000,'tra-chanh-day-mat-ong.jpg'],
+['tra-dau-tuoi','Trà dâu tươi',48000,'tra-dau-tuoi.jpg'],
+['tra-luu-berry','Trà lựu berry',49000,'tra-luu-berry.jpg'],
+['tra-vai-chanh','Trà vải chanh',47000,'tra-vai-chanh.jpg'],
+['tra-tao-xanh','Trà táo xanh',45000,'tra-tao-xanh.jpg'],
+['tra-dua-nha-dam','Trà dứa nha đam',48000,'tra-dua-nha-dam.jpg'],
+['tra-cam-nhiet-doi','Trà cam nhiệt đới',49000,'tra-cam-nhiet-doi.jpg']]],['Kem cheese & đặc biệt',[
 ['socola-kem-cheese','Socola kem cheese',49000,'socola-kem-cheese.jpg'],
 ['tra-sua-oreo-kem-cheese','Trà sữa Oreo kem cheese',49000,'tra-sua-oreo-kem-cheese.jpg'],
 ['tra-sua-matcha-kem-cheese','Trà sữa matcha kem cheese',47000,'tra-sua-matcha-kem-cheese.jpg'],
@@ -25,8 +23,12 @@ const groups=[
 ['tra-xoai-kem-cheese','Trà xoài kem cheese',49000,'tra-xoai-kem-cheese.jpg'],
 ['tra-sua-pudding-trung','Trà sữa pudding trứng',46000,'tra-sua-pudding-trung.jpg'],
 ['tra-sua-caramel-kem-cheese','Trà sữa caramel kem cheese',49000,'tra-sua-caramel-kem-cheese.jpg']]],
-['Combo & ưu đãi',[['combo-2-ly','Combo 2 ly',80000,'hero-tea-more.jpg']]]
-].map(([title,items])=>({title,items:items.map(([id,name,price,file])=>({id,name,price,image:img+file,note:'Vị trà thơm ngon.',ingredients:['Trà','Sữa','Topping','Đá']}))}));
+['Combo & ưu đãi',[
+['combo-doi-truyen-thong','Combo đôi truyền thống',80000,'01-combo-doi-truyen-thong.png'],
+['combo-doi-trai-cay','Combo đôi trái cây',90000,'02-combo-doi-trai-cay.png'],
+['combo-kem-cheese','Combo kem cheese',95000,'03-combo-kem-cheese.png'],
+['combo-ban-than','Combo bạn thân',135000,'04-combo-ban-than.png'],
+['combo-nhom-4-ly','Combo nhóm 4 ly',170000,'05-combo-nhom-4-ly.png']]]].map(([title,items])=>({title,items:items.map(([id,name,price,file])=>({id,name,price,image:img+file,note:'Vị trà thơm ngon.',ingredients:['Trà','Sữa','Topping','Đá']}))}));
 const $=s=>document.querySelector(s);let cart=[],current=null,qty=1;
 const money=n=>n.toLocaleString('vi-VN')+'đ';
 function render(){ $('#menuSections').innerHTML=groups.map(g=>`<section class="menu-group"><div class="menu-group-head"><div><h2>${g.title}</h2><p>Vuốt để xem món</p></div><span>${g.items.length} món</span></div><div class="carousel">${g.items.map(p=>`<article class="product"><div class="product-image"><img src="${p.image}" alt="${p.name}"></div><div class="product-body"><div class="product-name">${p.name}</div><div class="product-meta"><span class="product-price">${money(p.price)}</span></div><button class="button select-product" data-id="${p.id}">Chọn món</button></div></article>`).join('')}</div></section>`).join('');
