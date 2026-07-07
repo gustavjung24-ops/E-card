@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#fff8f1">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
@@ -92,7 +92,7 @@ body.theme-cocoa .select-product,body.theme-cocoa .save-contact{background:#3b24
 .app-chip{background:linear-gradient(135deg,#8a4c26,#d98a45)!important;animation:none!important}
 .label-short{display:none}
 @media(max-width:360px){.profile-actions{gap:4px!important}.profile-actions .save-contact,.profile-actions .app-chip{height:32px!important;padding:0 8px!important}.label-full{display:none}.label-short{display:inline}}
-</style></head>
+</style><style id="hard-mobile-lock">html,body{touch-action:pan-y;overscroll-behavior:none}*{-webkit-touch-callout:none}input,textarea{touch-action:auto}</style></head>
 <body>
   <main class="page">
     <section class="hero" aria-label="Tea More menu demo">
@@ -147,5 +147,5 @@ body.theme-cocoa .select-product,body.theme-cocoa .save-contact{background:#3b24
   </div>
 
   <script src="assets/js/tea-shop.js"></script>
-<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js"));}</script></body>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",async()=>{const r=await navigator.serviceWorker.register("./sw.js");await r.update();navigator.serviceWorker.addEventListener("controllerchange",()=>location.reload())});}</script></body>
 </html>

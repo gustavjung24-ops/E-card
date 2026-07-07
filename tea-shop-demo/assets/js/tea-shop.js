@@ -41,7 +41,13 @@ document.addEventListener('click',e=>{if(e.target.id==='productQuantityMinus'){q
 $('#addToCart').onclick=()=>{cart.push({...current,qty});updateCart();document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'))};
 $('#openCart').onclick=()=>{$('#cartList').innerHTML=cart.map(x=>`<div>${x.name} x${x.qty} - ${money(x.price*x.qty)}</div>`).join('')||'<div>Giỏ hàng trống</div>';$('#cartTotal').textContent=money(cart.reduce((a,x)=>a+x.price*x.qty,0));$('#cartModal').classList.add('open')};
 $('#continueShopping').onclick=()=>document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'));
-const save=$('#saveContact');if(save)save.onclick=()=>{const a=document.createElement('a');a.href='data:text/vcard,FN:Tea More';a.download='tea-more.vcf';a.click()};
+const save=$('#saveContact');
+if(save)save.onclick=async()=>{
+ const vcf=`BEGIN:VCARD\nVERSION:3.0\nFN:Tea More\nORG:Tea More\nTEL;TYPE=CELL:0907489278\nURL:https://e-card-fawn-five.vercel.app/tea-shop-demo/\nEND:VCARD`;
+ const file=new File([vcf],'tea-more.vcf',{type:'text/vcard'});
+ try{if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({title:'Tea More',files:[file]});return;}}catch(e){}
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([vcf],{type:'text/vcard'}));a.download='tea-more.vcf';a.click();
+};
 
 const sendOrder=$('#sendOrder');
 if(sendOrder){sendOrder.onclick=async()=>{
