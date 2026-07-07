@@ -86,7 +86,13 @@ body.theme-cocoa .select-product,body.theme-cocoa .save-contact{background:#3b24
 .product-name{height:42px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35;font-size:14px}
 .product-meta{margin-top:auto;margin-bottom:10px;min-height:22px}
 .select-product{margin-top:0;height:38px;display:flex;align-items:center;justify-content:center}</style>
-<style id="pwa-mobile-lock">html,body{max-width:100%;overflow-x:hidden;overscroll-behavior-x:none;-webkit-tap-highlight-color:transparent}body{min-height:100dvh;-webkit-user-select:none;user-select:none}input,textarea{user-select:text;-webkit-user-select:text}</style><style id="pwa-install-ui">#installApp[hidden]{display:none!important}#installApp:not([hidden]){width:auto;height:34px;padding:0 12px;border-radius:999px}</style></head>
+<style id="pwa-mobile-lock">html,body{max-width:100%;overflow-x:hidden;overscroll-behavior-x:none;-webkit-tap-highlight-color:transparent}body{min-height:100dvh;-webkit-user-select:none;user-select:none}input,textarea{user-select:text;-webkit-user-select:text}</style><style id="pwa-install-ui">#installApp[hidden]{display:none!important}#installApp:not([hidden]){width:auto;height:34px;padding:0 12px;border-radius:999px}</style><style id="compact-profile-actions">
+.profile-actions{display:flex!important;align-items:center!important;gap:6px!important;white-space:nowrap!important}
+.profile-actions .save-contact,.profile-actions .app-chip{width:auto!important;height:34px!important;min-width:0!important;padding:0 10px!important;border-radius:999px!important;font-size:11px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
+.app-chip{background:linear-gradient(135deg,#8a4c26,#d98a45)!important;animation:none!important}
+.label-short{display:none}
+@media(max-width:360px){.profile-actions{gap:4px!important}.profile-actions .save-contact,.profile-actions .app-chip{height:32px!important;padding:0 8px!important}.label-full{display:none}.label-short{display:inline}}
+</style></head>
 <body>
   <main class="page">
     <section class="hero" aria-label="Tea More menu demo">
@@ -95,7 +101,7 @@ body.theme-cocoa .select-product,body.theme-cocoa .save-contact{background:#3b24
       <div class="hero-bottom"><div><strong>Tea More</strong><span>Ch&#7885;n m&#243;n &middot; th&#234;m gi&#7887; &middot; g&#7917;i Zalo</span></div><span class="hero-dot" aria-hidden="true"></span></div>
     </section>
 
-    <section class="shop-profile" aria-label="Th&#244;ng tin qu&#225;n"><img class="shop-logo" src="assets/images/menu/logo.png" alt="Tea More"><div class="shop-copy"><h2>Tea More</h2><p><a class="shop-map" href="https://maps.google.com/?q=Tea+More+Shop" target="_blank" rel="noopener">&#128205; Xem v&#7883; tr&#237; qu&#225;n</a><br>Giao nhanh - &#273;&#7863;t m&#243;n qua Zalo</p></div><div class="profile-actions"><button class="button save-contact" id="saveContact" type="button">L&#432;u qu&#225;n</button><button class="app-chip install-app" id="installApp" type="button" hidden aria-label="Cài ứng dụng Tea More">Cài app</button></div></section>
+    <section class="shop-profile" aria-label="Th&#244;ng tin qu&#225;n"><img class="shop-logo" src="assets/images/menu/logo.png" alt="Tea More"><div class="shop-copy"><h2>Tea More</h2><p><a class="shop-map" href="https://maps.google.com/?q=Tea+More+Shop" target="_blank" rel="noopener">&#128205; Xem v&#7883; tr&#237; qu&#225;n</a><br>Giao nhanh - &#273;&#7863;t m&#243;n qua Zalo</p></div><div class="profile-actions"><button class="button save-contact" id="saveContact" type="button"><span class="label-full">L&#432;u qu&#225;n</span><span class="label-short">L&#432;u</span></button><button class="app-chip install-app" id="installApp" type="button" hidden aria-label="Cài ứng dụng Tea More">Cài app</button></div></section>
 
     <div class="menu-groups" id="menuSections" aria-label="Kh&#225;m ph&#225; menu"></div><div class="modal" id="themeModal"><div class="sheet"><button data-close-modal class="close">&#215;</button><h2>Ch&#7885;n phong c&#225;ch</h2><div class="theme-options"><button class="theme-btn active" data-theme="velvet">Tea Premium</button><button class="theme-btn" data-theme="fresh">Fresh Garden</button><button class="theme-btn" data-theme="gold">Luxury Gold</button><button class="theme-btn" data-theme="matcha">Matcha Zen</button><button class="theme-btn" data-theme="berry">Berry Cream</button><button class="theme-btn" data-theme="cocoa">Dark Cocoa</button></div></div></div>
   </main>

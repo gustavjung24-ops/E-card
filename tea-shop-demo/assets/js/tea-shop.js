@@ -65,27 +65,36 @@ if(openCheckout){openCheckout.onclick=()=>$('#checkoutModal').classList.add('ope
 
 let deferredInstallPrompt = null;
 const installBtn = $('#installApp');
+const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+const syncInstallButton = () => {
+  if (!installBtn) return;
+  installBtn.hidden = isStandalone();
+};
+syncInstallButton();
 if (installBtn) {
-  installBtn.hidden = false;
-  installBtn.textContent = 'Cài app';
   installBtn.onclick = async () => {
+    if (isStandalone()) return;
     if (deferredInstallPrompt) {
       deferredInstallPrompt.prompt();
       await deferredInstallPrompt.userChoice;
       deferredInstallPrompt = null;
-    } else {
-      const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-      alert(isIOS ? 'Trên iPhone: bấm Chia sẻ → Thêm vào MH chính.' : 'Mở menu trình duyệt và chọn Cài ứng dụng Tea More.');
+      return;
     }
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    alert(isIOS ? 'Trên iPhone: bấm Chia sẻ → Thêm vào Màn hình chính.' : 'Mở menu trình duyệt và chọn Cài ứng dụng Tea More.');
   };
 }
 window.addEventListener('beforeinstallprompt', event => {
   event.preventDefault();
   deferredInstallPrompt = event;
+  syncInstallButton();
 });
 window.addEventListener('appinstalled', () => {
   deferredInstallPrompt = null;
-  if (installBtn) installBtn.hidden = true;
+  syncInstallButton();
 });
+const displayModeQuery = window.matchMedia('(display-mode: standalone)');
+if (displayModeQuery.addEventListener) displayModeQuery.addEventListener('change', syncInstallButton);
+else if (displayModeQuery.addListener) displayModeQuery.addListener(syncInstallButton);
 render();updateCart();
 })();
